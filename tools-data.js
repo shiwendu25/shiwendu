@@ -26,7 +26,7 @@ const toolsDatabase = [
         description: "All-in-one solution: rename, import, search, bulk operations & duplicate finder.",
         fullDescription: "Complete file management solution with 6 powerful functions. Perfect for organizing thousands of files in seconds!",
         oldPrice: 2999,
-        newPrice: 999,
+        newPrice: 1099,
         rating: 4.9,
         reviews: 127,
         fileName: "file-management-dashboard.xlsm",
