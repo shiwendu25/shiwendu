@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Shiwendu - SS Tools Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="bg-animation">
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+</div>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <div class="logo-box"><span>SS</span></div>
+            <div class="logo-text">
+                <span class="brand">Tools Hub</span>
+                <span class="tagline">Premium Excel Tools</span>
+            </div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://wa.me/919038338852" class="btn-nav">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<section class="page-header">
+    <div class="container">
+        <div class="page-header-content">
+            <div class="hero-badge" style="margin-bottom: 20px;">
+                <span class="pulse"></span>
+                <span>👋 Meet the Founder</span>
+            </div>
+            <h1>About <span class="gradient-text">Shiwendu</span></h1>
+            <p>Passionate Excel developer helping businesses save time and boost productivity</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="profile-box">
+                    <div class="profile-avatar">SS</div>
+                    <h2>Shiwendu</h2>
+                    <p>Founder & Lead Developer</p>
+                    <div class="profile-stats">
+                        <div><strong>5+</strong> Years Experience</div>
+                        <div><strong>50+</strong> Tools Built</div>
+                        <div><strong>500+</strong> Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>My Story</h2>
+                <p>Hello! I'm Shiwendu, the founder of SS Tools Hub. With over 5 years of experience in Excel VBA development, I've helped hundreds of businesses and individuals automate their daily tasks and save countless hours.</p>
+                
+                <p>My journey started when I realized how much time people waste on repetitive Excel tasks. I knew there had to be a better way. So I started building premium VBA tools that turn complex operations into one-click solutions.</p>
+                
+                <h3>🎯 Our Mission</h3>
+                <p>To empower professionals and businesses with affordable, easy-to-use Excel automation tools that save time and increase productivity by 10x.</p>
+                
+                <h3>💡 What We Offer</h3>
+                <ul class="check-list">
+                    <li><i class="fas fa-check"></i> Premium VBA tools at affordable prices</li>
+                    <li><i class="fas fa-check"></i> Custom tool development</li>
+                    <li><i class="fas fa-check"></i> Lifetime support and updates</li>
+                    <li><i class="fas fa-check"></i> Money-back guarantee</li>
+                </ul>
+                
+                <h3>📞 Let's Connect</h3>
+                <p>Have a project in mind? Need custom automation? I'd love to hear from you!</p>
+                <a href="https://wa.me/919038338852" class="btn btn-primary btn-large" style="margin-top: 20px;">
+                    <i class="fab fa-whatsapp"></i> Chat with Me
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© 2025 SS Tools Hub. Made with ❤️ by <strong>Shiwendu</strong></p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/919038338852" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-text">Chat Now</span>
+</a>
+
+<script>
+function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('active');
+}
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+});
+</script>
+
+</body>
+</html>

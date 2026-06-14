@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - SS Tools Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .success-container {
+            background: white;
+            border-radius: 30px;
+            padding: 60px 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.8s ease;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #10b981, #059669, #34d399);
+        }
+        
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 60px;
+            position: relative;
+            animation: bounce 1s ease;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 60%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            80% { transform: translateY(-15px); }
+        }
+        
+        .success-icon::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.2);
+            animation: ripple 2s infinite;
+            z-index: -1;
+        }
+        
+        @keyframes ripple {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        
+        .success-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .success-message {
+            font-size: 20px;
+            color: #64748b;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .order-card {
+            background: linear-gradient(135deg, #f8fafc, #fff);
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .order-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .order-row:last-child {
+            border-bottom: none;
+        }
+        
+        .order-row .label {
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        .order-row .value {
+            color: #0f172a;
+            font-weight: 700;
+        }
+        
+        .order-row .value.success {
+            color: #10b981;
+        }
+        
+        .next-steps {
+            background: linear-gradient(135deg, #eff6ff, #f0f9ff);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            color: #0f172a;
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .step-list {
+            list-style: none;
+        }
+        
+        .step-list li {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            color: #334155;
+            font-weight: 500;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #64748b;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .btn-outline:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f93;
+            opacity: 0;
+            animation: confetti 3s ease-out infinite;
+        }
+        
+        @keyframes confetti {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .contact-help {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+        }
+        
+        .contact-help a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 600px) {
+            .success-title { font-size: 32px; }
+            .success-icon { width: 100px; height: 100px; font-size: 50px; }
+            .success-container { padding: 40px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="success-container">
+    <!-- Confetti -->
+    <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="confetti" style="left: 20%; animation-delay: 0.5s; background: #f0c;"></div>
+    <div class="confetti" style="left: 40%; animation-delay: 1s; background: #0cf;"></div>
+    <div class="confetti" style="left: 60%; animation-delay: 1.5s; background: #f93;"></div>
+    <div class="confetti" style="left: 80%; animation-delay: 2s; background: #0f9;"></div>
+
+    <!-- Success Icon -->
+    <div class="success-icon">
+        <i class="fas fa-check"></i>
+    </div>
+
+    <!-- Title -->
+    <h1 class="success-title">🎉 Order Successful!</h1>
+    
+    <p class="success-message">
+        Thank you for your purchase! Your order has been received successfully.
+    </p>
+
+    <!-- Order Details -->
+    <div class="order-card">
+        <div class="order-row">
+            <span class="label">Order Status:</span>
+            <span class="value success">✅ Confirmed</span>
+        </div>
+        <div class="order-row">
+            <span class="label">Order ID:</span>
+            <span class="value" id="orderId">#SS2025001</span>
+        </div>
+        <div class="order-row">
+            <span class="label">Date:</span>
+            <span class="value" id="orderDate">-</span>
+        </div>
+        <div class="order-row">
+            <span class="label">Delivery:</span>
+            <span class="value">📧 Via Email/WhatsApp</span>
+        </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="next-steps">
+        <h3>📋 What Happens Next?</h3>
+        <ol class="step-list">
+            <li>
+                <span class="step-number">1</span>
+                <span>You'll receive your tool file (.xlsm) on WhatsApp within 15 minutes</span>
+            </li>
+            <li>
+                <span class="step-number">2</span>
+                <span>Video tutorial and installation guide will be sent with the file</span>
+            </li>
+            <li>
+                <span class="step-number">3</span>
+                <span>If you face any issues, contact us anytime for support</span>
+            </li>
+            <li>
+                <span class="step-number">4</span>
+                <span>Enjoy 10x productivity with your new tool! 🚀</span>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20just%20completed%20payment.%20Please%20send%20the%20tool" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Send Payment Proof
+        </a>
+        <a href="tools.html" class="btn btn-primary">
+            <i class="fas fa-shopping-bag"></i> Browse More Tools
+        </a>
+        <a href="index.html" class="btn btn-outline">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+    </div>
+
+    <!-- Contact Help -->
+    <div class="contact-help">
+        <p>
+            <strong>Need Help?</strong><br>
+            📧 <a href="mailto:shiwendu@zohomail.in">shiwendu@zohomail.in</a><br>
+            📱 <a href="tel:+919038338852">+91 9038338852</a>
+        </p>
+    </div>
+</div>
+
+<script>
+// Generate unique order ID
+const orderNum = Math.floor(Math.random() * 9000) + 1000;
+document.getElementById('orderId').textContent = '#SS2025' + orderNum;
+
+// Show current date
+document.getElementById('orderDate').textContent = new Date().toLocaleString('en-IN', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+});
+</script>
+
+</body>
+</html>

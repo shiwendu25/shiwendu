@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Tools Hub - Premium Excel VBA Tools & Automation</title>
+    <meta name="description" content="Premium Excel VBA tools by Shiwendu. Save hours with one-click automation!">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ANIMATED BACKGROUND -->
+<div class="bg-animation">
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <div class="logo-box">
+                <span>SS</span>
+            </div>
+            <div class="logo-text">
+                <span class="brand">Tools Hub</span>
+                <span class="tagline">Premium Excel Tools</span>
+            </div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://wa.me/919038338852" class="btn-nav">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                <span>🚀 Premium Tools by Shiwendu</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Transform Your <br>
+                <span class="gradient-text">Excel Workflow</span> <br>
+                with Premium VBA Tools
+            </h1>
+            
+            <p class="hero-subtitle">
+                Save 10+ hours every week with ready-to-use Excel automation tools.<br>
+                Professional dashboards, instant downloads, lifetime updates!
+            </p>
+            
+            <div class="hero-cta">
+                <a href="tools.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i>
+                    Explore All Tools
+                </a>
+                <a href="https://wa.me/919038338852" class="btn btn-glass btn-large">
+                    <i class="fab fa-whatsapp"></i>
+                    Chat with Us
+                </a>
+            </div>
+            
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <i class="fas fa-shield-check"></i>
+                    <span>100% Secure</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Instant Delivery</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Support</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-sync"></i>
+                    <span>Free Updates</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <i class="fas fa-folder"></i>
+                </div>
+                <div>
+                    <h4>File Manager</h4>
+                    <p>500+ users</p>
+                </div>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                    <h4>Sales Analytics</h4>
+                    <p>4.9 ⭐ Rating</p>
+                </div>
+            </div>
+            <div class="floating-card card-3">
+                <div class="card-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <div>
+                    <h4>Auto Magic</h4>
+                    <p>10x Faster</p>
+                </div>
+            </div>
+            
+            <div class="hero-circle">
+                <div class="circle-inner">
+                    <i class="fas fa-cog fa-spin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Premium Tools</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="10000">0</div>
+                <div class="stat-label">Hours Saved</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="99">0</div>
+                <div class="stat-label">% Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED TOOLS -->
+<section class="section" id="tools">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">🔥 Most Popular</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Tools</span></h2>
+            <p class="section-subtitle">Premium automation solutions trusted by 500+ professionals</p>
+        </div>
+
+        <div class="tools-grid">
+            <!-- TOOL 1 -->
+            <div class="tool-card popular">
+                <div class="tool-ribbon">⭐ BESTSELLER</div>
+                <div class="tool-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <i class="fas fa-folder-tree"></i>
+                </div>
+                <div class="tool-content">
+                    <div class="tool-category">File Management</div>
+                    <h3 class="tool-name">File Management Dashboard</h3>
+                    <p class="tool-description">All-in-one solution for renaming, importing, searching files with bulk operations & duplicate finder.</p>
+                    
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> 6 Functions</span>
+                        <span><i class="fas fa-check"></i> Bulk Operations</span>
+                        <span><i class="fas fa-check"></i> Smart Search</span>
+                    </div>
+                    
+                    <div class="tool-bottom">
+                        <div class="tool-pricing">
+                            <span class="price-old">₹2,999</span>
+                            <span class="price-new">₹999</span>
+                        </div>
+                        <div class="tool-rating">
+                            ⭐⭐⭐⭐⭐ <span>(127)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20want%20to%20buy%20File%20Management%20Dashboard%20(₹999)" class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i> Buy Now via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- TOOL 2 -->
+            <div class="tool-card">
+                <div class="tool-ribbon ribbon-new">🆕 NEW</div>
+                <div class="tool-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="tool-content">
+                    <div class="tool-category">Analytics</div>
+                    <h3 class="tool-name">Sales Analytics Pro</h3>
+                    <p class="tool-description">Advanced dashboard with real-time KPIs, interactive charts, forecasting & beautiful reports.</p>
+                    
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Real-time KPIs</span>
+                        <span><i class="fas fa-check"></i> Charts</span>
+                        <span><i class="fas fa-check"></i> Reports</span>
+                    </div>
+                    
+                    <div class="tool-bottom">
+                        <div class="tool-pricing">
+                            <span class="price-old">₹3,499</span>
+                            <span class="price-new">₹1,499</span>
+                        </div>
+                        <div class="tool-rating">
+                            ⭐⭐⭐⭐⭐ <span>(89)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20want%20to%20buy%20Sales%20Analytics%20Pro%20(₹1499)" class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i> Buy Now via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- TOOL 3 -->
+            <div class="tool-card">
+                <div class="tool-ribbon ribbon-hot">🔥 HOT</div>
+                <div class="tool-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="tool-content">
+                    <div class="tool-category">Data Tools</div>
+                    <h3 class="tool-name">Data Cleaner Suite</h3>
+                    <p class="tool-description">Clean messy data instantly! Remove duplicates, fix formats, standardize entries with one click.</p>
+                    
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Remove Dupes</span>
+                        <span><i class="fas fa-check"></i> Fix Formats</span>
+                        <span><i class="fas fa-check"></i> Validation</span>
+                    </div>
+                    
+                    <div class="tool-bottom">
+                        <div class="tool-pricing">
+                            <span class="price-old">₹1,999</span>
+                            <span class="price-new">₹799</span>
+                        </div>
+                        <div class="tool-rating">
+                            ⭐⭐⭐⭐⭐ <span>(156)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20want%20to%20buy%20Data%20Cleaner%20Suite%20(₹799)" class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i> Buy Now via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- TOOL 4 -->
+            <div class="tool-card">
+                <div class="tool-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div class="tool-content">
+                    <div class="tool-category">Email Tools</div>
+                    <h3 class="tool-name">Email Automation Pro</h3>
+                    <p class="tool-description">Send personalized bulk emails from Excel with attachments, templates & tracking.</p>
+                    
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Bulk Email</span>
+                        <span><i class="fas fa-check"></i> Mail Merge</span>
+                        <span><i class="fas fa-check"></i> Templates</span>
+                    </div>
+                    
+                    <div class="tool-bottom">
+                        <div class="tool-pricing">
+                            <span class="price-old">₹2,499</span>
+                            <span class="price-new">₹1,199</span>
+                        </div>
+                        <div class="tool-rating">
+                            ⭐⭐⭐⭐⭐ <span>(94)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20want%20to%20buy%20Email%20Automation%20Pro%20(₹1199)" class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i> Buy Now via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- TOOL 5 -->
+            <div class="tool-card">
+                <div class="tool-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <div class="tool-content">
+                    <div class="tool-category">Business</div>
+                    <h3 class="tool-name">Invoice Generator</h3>
+                    <p class="tool-description">Professional invoices with custom templates, GST calculations & PDF export.</p>
+                    
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> GST Calc</span>
+                        <span><i class="fas fa-check"></i> PDF Export</span>
+                        <span><i class="fas fa-check"></i> Templates</span>
+                    </div>
+                    
+                    <div class="tool-bottom">
+                        <div class="tool-pricing">
+                            <span class="price-old">₹1,499</span>
+                            <span class="price-new">₹599</span>
+                        </div>
+                        <div class="tool-rating">
+                            ⭐⭐⭐⭐⭐ <span>(203)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20want%20to%20buy%20Invoice%20Generator%20(₹599)" class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i> Buy Now via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- TOOL 6 -->
+            <div class="tool-card">
+                <div class="tool-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="tool-content">
+                    <div class="tool-category">Project Management</div>
+                    <h3 class="tool-name">Project Tracker Pro</h3>
+                    <p class="tool-description">Gantt charts, task management, team collaboration & deadline tracking in Excel.</p>
+                    
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Gantt Chart</span>
+                        <span><i class="fas fa-check"></i> Tasks</span>
+                        <span><i class="fas fa-check"></i> Reports</span>
+                    </div>
+                    
+                    <div class="tool-bottom">
+                        <div class="tool-pricing">
+                            <span class="price-old">₹2,999</span>
+                            <span class="price-new">₹1,299</span>
+                        </div>
+                        <div class="tool-rating">
+                            ⭐⭐⭐⭐⭐ <span>(78)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20want%20to%20buy%20Project%20Tracker%20Pro%20(₹1299)" class="btn-buy">
+                        <i class="fas fa-shopping-cart"></i> Buy Now via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-cta">
+            <a href="tools.html" class="btn btn-outline btn-large">
+                View All 50+ Tools <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section bg-gradient" id="features">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">✨ Why Choose Us</span>
+            <h2 class="section-title">Built for <span class="gradient-text">Excellence</span></h2>
+            <p class="section-subtitle">Premium quality tools backed by expert support</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized VBA code that runs blazingly fast. Save hours of manual work in seconds!</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>100% Secure</h3>
+                <p>All tools are virus-free, tested & secure. Your data never leaves your computer.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Direct support from developer via WhatsApp, Email or Phone anytime.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <h3>Free Updates</h3>
+                <p>Get all future updates and new features absolutely free once you buy.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #30cfd0, #330867);">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Beautiful Design</h3>
+                <p>Modern dashboards with glass effects, gradients & professional UI design.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Easy to Use</h3>
+                <p>No coding required! Video tutorials and step-by-step guides included.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">💬 Reviews</span>
+            <h2 class="section-title">What Our <span class="gradient-text">Users Say</span></h2>
+            <p class="section-subtitle">Trusted by 500+ happy customers worldwide</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The File Management Dashboard saved me 5+ hours every week! Beautiful design and just works perfectly. Best investment ever!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">RS</div>
+                    <div>
+                        <h4>Rahul Sharma</h4>
+                        <p>Operations Manager • Mumbai</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Shiwendu is amazing! Custom tool built in 2 days, exactly what I needed. Support is top-notch. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">PK</div>
+                    <div>
+                        <h4>Priya Kumari</h4>
+                        <p>Chartered Accountant • Delhi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Got the Pro plan and it's worth every rupee! All tools are professional quality. My team's productivity doubled!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">AM</div>
+                    <div>
+                        <h4>Amit Mehta</h4>
+                        <p>CEO • Tech Startup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="section bg-dark" id="pricing">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge light">💰 Pricing</span>
+            <h2 class="section-title light">Simple <span class="gradient-text">Pricing</span></h2>
+            <p class="section-subtitle light">Choose the perfect plan for you</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="price">
+                    <span>₹</span>999
+                    <small>/tool</small>
+                </div>
+                <p>Perfect for individuals</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> 1 Premium Tool</li>
+                    <li><i class="fas fa-check"></i> Lifetime License</li>
+                    <li><i class="fas fa-check"></i> Email Support</li>
+                    <li><i class="fas fa-check"></i> Free Updates</li>
+                    <li><i class="fas fa-check"></i> Video Tutorial</li>
+                </ul>
+                <a href="https://wa.me/919038338852?text=I%20want%20Starter%20Plan" class="btn btn-outline-white">Get Started</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="popular-tag">🔥 MOST POPULAR</div>
+                <h3>Professional</h3>
+                <div class="price">
+                    <span>₹</span>4,999
+                    <small>/year</small>
+                </div>
+                <p>Best for power users</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> All 50+ Tools</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                    <li><i class="fas fa-check"></i> Custom Tools (2/yr)</li>
+                    <li><i class="fas fa-check"></i> WhatsApp + Phone</li>
+                    <li><i class="fas fa-check"></i> Commercial License</li>
+                </ul>
+                <a href="https://wa.me/919038338852?text=I%20want%20Pro%20Plan" class="btn btn-primary">Get Pro Now</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">
+                    <span>₹</span>14,999
+                    <small>/year</small>
+                </div>
+                <p>For teams & businesses</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Everything in Pro</li>
+                    <li><i class="fas fa-check"></i> 10 User Licenses</li>
+                    <li><i class="fas fa-check"></i> Custom Development</li>
+                    <li><i class="fas fa-check"></i> Training Sessions</li>
+                    <li><i class="fas fa-check"></i> Dedicated Manager</li>
+                </ul>
+                <a href="https://wa.me/919038338852?text=I%20want%20Enterprise%20Plan" class="btn btn-outline-white">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to <span class="gradient-text">Supercharge</span> Your Productivity?</h2>
+            <p>Join 500+ professionals saving 10+ hours every week with SS Tools Hub</p>
+            <div class="cta-buttons">
+                <a href="tools.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i> Browse All Tools
+                </a>
+                <a href="https://wa.me/919038338852" class="btn btn-glass btn-large">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo">
+                    <div class="logo-box">
+                        <span>SS</span>
+                    </div>
+                    <div class="logo-text">
+                        <span class="brand">Tools Hub</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Premium Excel VBA tools and automation solutions to boost your productivity. Made with ❤️ in India.</p>
+                <div class="social-links">
+                    <a href="https://wa.me/919038338852"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:shiwendu@zohomail.in"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+919038338852"><i class="fas fa-phone"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">All Tools</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#features">Features</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Popular Tools</h4>
+                <ul>
+                    <li><a href="tools.html">File Manager</a></li>
+                    <li><a href="tools.html">Sales Analytics</a></li>
+                    <li><a href="tools.html">Data Cleaner</a></li>
+                    <li><a href="tools.html">Email Automation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-user"></i> Shiwendu Founder</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:shiwendu@zohomail.in">shiwendu@zohomail.in</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+919038338852">+91 9038338852</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SS Tools Hub. All rights reserved. | Made with ❤️ by <strong>Shiwendu</strong></p>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/919038338852?text=Hi%20Shiwendu,%20I%20want%20to%20know%20more%20about%20SS%20Tools%20Hub" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-text">Chat with us</span>
+</a>
+
+<script>
+// Mobile menu
+function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('active');
+}
+
+// Counter animation
+function animateValue(el, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        el.textContent = Math.floor(progress * (end - start) + start) + (end >= 100 ? '+' : '%');
+        if (progress < 1) window.requestAnimationFrame(step);
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Observe stats
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelectorAll('.stat-number').forEach(stat => {
+                const target = +stat.getAttribute('data-target');
+                animateValue(stat, 0, target, 2000);
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+const statsBar = document.querySelector('.stats-bar');
+if (statsBar) observer.observe(statsBar);
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>
