@@ -100,7 +100,7 @@ const toolsDatabase = [
         description: "Clean messy data instantly! Remove duplicates, fix formats with one click.",
         fullDescription: "Professional data cleaning suite for all your messy Excel data needs.",
         oldPrice: 1999,
-        newPrice: 799,
+        newPrice: 999,
         rating: 4.9,
         reviews: 156,
         fileName: "data-cleaner-suite.xlsm",
