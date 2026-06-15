@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Tools - SS Tools Hub</title>
+    <title>All Tools - SS Tools Hub | Premium Excel VBA Tools</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,6 +14,12 @@
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
     <div class="bg-shape shape-3"></div>
+</div>
+
+<div class="top-offer-bar">
+    <div class="container">
+        <span>🎉 <strong>FLASH SALE!</strong> Use code <strong>FLASH50</strong> for 50% OFF • Limited Time!</span>
+    </div>
 </div>
 
 <nav class="navbar">
@@ -29,12 +35,18 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="tools.html" class="active">Tools</a></li>
             <li><a href="index.html#pricing">Pricing</a></li>
-            <li><a href="index.html#features">Features</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li><a href="cart.html" class="nav-cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart 
+                <span class="nav-cart-badge">0</span>
+            </a></li>
             <li><a href="https://wa.me/919038338852" class="btn-nav">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a></li>
         </ul>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i>
+        </button>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
     </div>
 </nav>
@@ -51,7 +63,7 @@
         <div class="search-section">
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Search tools by name or category..." onkeyup="filterTools()">
+                <input type="text" id="searchInput" placeholder="Search tools..." onkeyup="filterTools()">
             </div>
         </div>
         
@@ -70,7 +82,6 @@
 
 <section class="section" style="padding-top: 20px;">
     <div class="container">
-        <!-- TOOLS AUTO-LOADED FROM tools-data.js -->
         <div class="tools-grid" id="toolsGrid"></div>
         
         <div class="custom-tool-section">
@@ -91,11 +102,10 @@
                     <div class="logo-box"><span>SS</span></div>
                     <div class="logo-text"><span class="brand">Tools Hub</span></div>
                 </a>
-                <p class="footer-desc">Premium Excel VBA tools and automation solutions. Made with ❤️ in India.</p>
+                <p class="footer-desc">Premium Excel VBA tools. Made with ❤️ in India.</p>
                 <div class="social-links">
                     <a href="https://wa.me/919038338852"><i class="fab fa-whatsapp"></i></a>
                     <a href="mailto:shiwendu@zohomail.in"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+919038338852"><i class="fas fa-phone"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -103,7 +113,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="tools.html">All Tools</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -123,7 +133,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 SS Tools Hub. All rights reserved. | Made with ❤️ by <strong>Shiwendu</strong></p>
+            <p>© 2025 SS Tools Hub. Made with ❤️ by <strong>Shiwendu</strong></p>
         </div>
     </div>
 </footer>
