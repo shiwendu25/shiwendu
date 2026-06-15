@@ -75,6 +75,7 @@ const toolsData = [
         },
         popular: false,
         showOnHome: true,
+        hidden : true ,
         videoUrl: null
     },
     {
