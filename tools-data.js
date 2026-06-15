@@ -59,8 +59,8 @@ const toolsData = [
         icon: "fas fa-chart-line",
         gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
         image: null,
-        oldPrice: 15499,
-        newPrice: 12499,
+        oldPrice: 8599,
+        newPrice: 5499,
         rating: 5,
         reviews: 89,
         badge: "NEW",
@@ -148,10 +148,10 @@ const toolsData = [
     },
     {
         id: 6,
-        name: "Project Tracker Pro",
-        category: "Business",
-        description: "Gantt charts, task management, team collaboration & deadline tracking in Excel.",
-        longDescription: "Complete project management solution with Gantt charts, team collaboration, deadline tracking, and progress reports.",
+        name: "GST Reconciliation",
+        category: "Reconciliation",
+        description: "GST Reconciliation Gstr 2B with Purchase Register",
+        long Description "Complete GST Reconciliation Gstr2B with Gstr3B"for small business & service,
         icon: "fas fa-tasks",
         gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
         image: null,
@@ -159,14 +159,14 @@ const toolsData = [
         newPrice: 1299,
         rating: 5,
         reviews: 78,
-        badge: null,
-        features: ["Gantt Chart", "Tasks", "Reports"],
+        badge: Hot,
+        features: ["Reconciliation ", "Reports"],
         beforeAfter: {
-            before: "Multiple project tools",
+            before: "Manually reconciliation ",
             after: "All-in-one Excel solution!"
         },
         popular: false,
-        showOnHome: false,
+        showOnHome: True,
         videoUrl: null
     }
 ];
