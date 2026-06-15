@@ -987,5 +987,4 @@ document.addEventListener('DOMContentLoaded', function() {
     loadReviews();
     updateCartBadge();
     startCountdown();
-    initRecentPurchases();
 });
