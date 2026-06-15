@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - SS Tools Hub | Excel Tips, Tutorials & Insights</title>
+    <meta name="description" content="Learn Excel automation, VBA tips, GST reconciliation tutorials, and business productivity insights from SS Tools Hub.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="bg-animation">
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+</div>
+
+<div class="top-offer-bar">
+    <div class="container">
+        <span>🎉 <strong>FLASH SALE!</strong> Use code <strong>FLASH20</strong> for 20% OFF • Limited Time!</span>
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <div class="logo-box"><span>SS</span></div>
+            <div class="logo-text">
+                <span class="brand">Tools Hub</span>
+                <span class="tagline">Premium Excel Tools</span>
+            </div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="cart.html" class="nav-cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart 
+                <span class="nav-cart-badge">0</span>
+            </a></li>
+            <li><a href="https://wa.me/919038338852" class="btn-nav">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a></li>
+        </ul>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </div>
+</nav>
+
+<!-- BLOG HEADER -->
+<section class="blog-header">
+    <div class="container">
+        <div class="hero-badge" style="margin: 0 auto 24px; display: inline-flex;">
+            <span class="pulse"></span>
+            <span>📝 Learn & Grow with Excel</span>
+        </div>
+        <h1>SS Tools Hub <span class="gradient-text">Blog</span></h1>
+        <p>Expert tips, tutorials & insights on Excel, VBA, GST, Accounting & Business Productivity</p>
+        
+        <!-- BLOG SEARCH -->
+        <div class="blog-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="blogSearch" placeholder="Search articles..." onkeyup="filterBlogs()">
+        </div>
+        
+        <!-- BLOG CATEGORIES -->
+        <div class="blog-categories">
+            <button class="filter-btn active" onclick="filterBlogCategory('all', this)">📚 All Articles</button>
+            <button class="filter-btn" onclick="filterBlogCategory('Excel Tips', this)">💡 Excel Tips</button>
+            <button class="filter-btn" onclick="filterBlogCategory('VBA Tutorial', this)">🛠️ VBA Tutorial</button>
+            <button class="filter-btn" onclick="filterBlogCategory('GST & Tax', this)">📊 GST & Tax</button>
+            <button class="filter-btn" onclick="filterBlogCategory('Business', this)">💼 Business</button>
+            <button class="filter-btn" onclick="filterBlogCategory('Automation', this)">⚡ Automation</button>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="section" style="padding: 40px 0;">
+    <div class="container">
+        <div class="featured-article" id="featuredArticle">
+            <!-- Auto-loaded -->
+        </div>
+    </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">
+            Latest <span class="gradient-text">Articles</span>
+        </h2>
+        
+        <div class="blog-grid" id="blogGrid">
+            <!-- Auto-loaded -->
+        </div>
+        
+        <!-- NEWSLETTER -->
+        <div class="newsletter-section">
+            <div class="newsletter-content">
+                <h2>📧 Get Weekly Excel Tips!</h2>
+                <p>Subscribe to our newsletter and receive expert Excel tips, tutorials & exclusive discounts!</p>
+                <form onsubmit="subscribeNewsletter(event)" class="newsletter-form">
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i> Subscribe
+                    </button>
+                </form>
+                <p class="newsletter-trust">🎁 Free Excel Templates + Weekly Tips • No Spam Ever</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo">
+                    <div class="logo-box"><span>SS</span></div>
+                    <div class="logo-text"><span class="brand">Tools Hub</span></div>
+                </a>
+                <p class="footer-desc">Premium Excel VBA tools & professional services by Shiwendu. Made with ❤️ in India.</p>
+                <div class="social-links">
+                    <a href="https://wa.me/919038338852"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:shiwendu@zohomail.in"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Blog Categories</h4>
+                <ul>
+                    <li><a href="blog.html">Excel Tips</a></li>
+                    <li><a href="blog.html">VBA Tutorial</a></li>
+                    <li><a href="blog.html">GST & Tax</a></li>
+                    <li><a href="blog.html">Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:shiwendu@zohomail.in">shiwendu@zohomail.in</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+919038338852">+91 9038338852</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SS Tools Hub. Made with ❤️ by <strong>Shiwendu</strong></p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/919038338852" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-text">Chat with us</span>
+</a>
+
+<script src="tools-data.js"></script>
+<script src="blog-data.js"></script>
+<script>
+function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('active');
+}
+
+function subscribeNewsletter(e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletterEmail').value;
+    
+    // Send to WhatsApp
+    const message = `📧 *Newsletter Subscription*\n\nNew subscriber wants weekly Excel tips:\n\nEmail: ${email}\n\nPlease add to mailing list! 🙏`;
+    const encoded = encodeURIComponent(message);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, '_blank');
+    
+    showNotification('✅ Successfully subscribed!', 'success');
+    document.getElementById('newsletterEmail').value = '';
+}
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+});
+</script>
+
+</body>
+</html>
