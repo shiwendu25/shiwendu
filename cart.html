@@ -169,9 +169,12 @@ function renderCart() {
                         <span>₹${total.toLocaleString('en-IN')}</span>
                     </div>
                     
-                    <button onclick="checkoutWhatsApp()" class="btn-checkout">
-                        <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
-                    </button>
+                   <a href="payment.html" class="btn-checkout" style="text-decoration: none;">
+    <i class="fas fa-credit-card"></i> Proceed to Payment
+</a>
+<button onclick="checkoutWhatsApp()" class="btn-checkout" style="background: #25D366; margin-top: 12px;">
+    <i class="fab fa-whatsapp"></i> Or Order via WhatsApp
+</button>
                     
                     <div class="trust-badges">
                         <div class="trust-badge">
