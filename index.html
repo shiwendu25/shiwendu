@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS Tools Hub - Premium Excel VBA Tools & Automation</title>
-    <meta name="description" content="Premium Excel VBA tools by Shiwendu. Save hours with one-click automation!">
+    <title>SS Tools Hub - Premium Excel VBA Tools | Save 10+ Hours/Week</title>
+    <meta name="description" content="Premium Excel VBA tools by Shiwendu. Save hours with one-click automation! 500+ happy customers. 100% money back guarantee.">
+    
+    <!-- Google Analytics -->
+    <!-- Replace G-XXXXXXXXXX with your tracking ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,6 +28,14 @@
     <div class="bg-shape shape-3"></div>
 </div>
 
+<!-- TOP OFFER BAR -->
+<div class="top-offer-bar">
+    <div class="container">
+        <span>🎉 <strong>FLASH SALE!</strong> Use code <strong>FLASH50</strong> for 50% OFF • Limited Time!</span>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
 <nav class="navbar">
     <div class="container nav-container">
         <a href="index.html" class="logo">
@@ -30,22 +49,29 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="tools.html">Tools</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="cart.html" class="nav-cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart 
+                <span class="nav-cart-badge">0</span>
+            </a></li>
             <li><a href="https://wa.me/919038338852" class="btn-nav">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a></li>
         </ul>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
     </div>
 </nav>
 
+<!-- HERO SECTION -->
 <section class="hero">
     <div class="container">
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="pulse"></span>
-                <span>🚀 Premium Tools by Shiwendu</span>
+                <span>🚀 Trusted by 500+ Professionals</span>
             </div>
             <h1 class="hero-title">
                 Transform Your <br>
@@ -56,6 +82,13 @@
                 Save 10+ hours every week with ready-to-use Excel automation tools.<br>
                 Professional dashboards, instant downloads, lifetime updates!
             </p>
+            
+            <!-- COUNTDOWN TIMER -->
+            <div class="countdown-section">
+                <p class="countdown-label">⏰ FLASH SALE ENDS IN:</p>
+                <div id="countdown" class="countdown-timer"></div>
+            </div>
+            
             <div class="hero-cta">
                 <a href="tools.html" class="btn btn-primary btn-large">
                     <i class="fas fa-rocket"></i> Explore All Tools
@@ -64,11 +97,25 @@
                     <i class="fab fa-whatsapp"></i> Chat with Us
                 </a>
             </div>
-            <div class="hero-trust">
-                <div class="trust-item"><i class="fas fa-shield-alt"></i><span>100% Secure</span></div>
-                <div class="trust-item"><i class="fas fa-bolt"></i><span>Instant Delivery</span></div>
-                <div class="trust-item"><i class="fas fa-headset"></i><span>24/7 Support</span></div>
-                <div class="trust-item"><i class="fas fa-sync"></i><span>Free Updates</span></div>
+            
+            <!-- TRUST INDICATORS -->
+            <div class="trust-indicators-grid">
+                <div class="trust-item-enhanced">
+                    <i class="fas fa-shield-alt"></i>
+                    <div><strong>100% Secure</strong><span>SSL Protected</span></div>
+                </div>
+                <div class="trust-item-enhanced">
+                    <i class="fas fa-bolt"></i>
+                    <div><strong>Instant Delivery</strong><span>Via WhatsApp</span></div>
+                </div>
+                <div class="trust-item-enhanced">
+                    <i class="fas fa-undo"></i>
+                    <div><strong>30-Day Refund</strong><span>Money Back</span></div>
+                </div>
+                <div class="trust-item-enhanced">
+                    <i class="fas fa-headset"></i>
+                    <div><strong>24/7 Support</strong><span>WhatsApp Help</span></div>
+                </div>
             </div>
         </div>
         <div class="hero-visual">
@@ -97,6 +144,7 @@
     </div>
 </section>
 
+<!-- STATS BAR -->
 <section class="stats-bar">
     <div class="container">
         <div class="stats-grid">
@@ -124,6 +172,70 @@
     </div>
 </section>
 
+<!-- BUNDLE DEALS -->
+<section class="section bundle-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">💰 BEST VALUE</span>
+            <h2 class="section-title">Bundle <span class="gradient-text">Deals</span></h2>
+            <p class="section-subtitle">Save more when you buy more!</p>
+        </div>
+        <div class="bundles-grid">
+            <div class="bundle-card">
+                <div class="bundle-discount">SAVE 20%</div>
+                <h3>Starter Bundle</h3>
+                <p>Any 2 Tools</p>
+                <div class="bundle-price">
+                    <span class="bundle-old">₹3,998</span>
+                    <span class="bundle-new">₹3,198</span>
+                </div>
+                <ul>
+                    <li>✅ Pick any 2 tools</li>
+                    <li>✅ 20% instant discount</li>
+                    <li>✅ Lifetime updates</li>
+                </ul>
+                <a href="tools.html" class="btn btn-outline">Select Tools</a>
+            </div>
+            
+            <div class="bundle-card featured">
+                <div class="bundle-discount">SAVE 30%</div>
+                <div class="popular-tag">🔥 POPULAR</div>
+                <h3>Pro Bundle</h3>
+                <p>Any 3 Tools</p>
+                <div class="bundle-price">
+                    <span class="bundle-old">₹5,997</span>
+                    <span class="bundle-new">₹4,198</span>
+                </div>
+                <ul>
+                    <li>✅ Pick any 3 tools</li>
+                    <li>✅ 30% instant discount</li>
+                    <li>✅ Priority support</li>
+                    <li>✅ Free customization</li>
+                </ul>
+                <a href="tools.html" class="btn btn-primary">Select Tools</a>
+            </div>
+            
+            <div class="bundle-card">
+                <div class="bundle-discount">SAVE 50%</div>
+                <h3>Mega Bundle</h3>
+                <p>All Tools</p>
+                <div class="bundle-price">
+                    <span class="bundle-old">₹15,994</span>
+                    <span class="bundle-new">₹7,997</span>
+                </div>
+                <ul>
+                    <li>✅ All current tools</li>
+                    <li>✅ 50% massive discount</li>
+                    <li>✅ Future tools FREE</li>
+                    <li>✅ VIP support</li>
+                </ul>
+                <a href="tools.html" class="btn btn-outline">Get Mega Deal</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED TOOLS -->
 <section class="section" id="tools">
     <div class="container">
         <div class="section-header">
@@ -131,7 +243,6 @@
             <h2 class="section-title">Featured <span class="gradient-text">Tools</span></h2>
             <p class="section-subtitle">Premium automation solutions trusted by 500+ professionals</p>
         </div>
-        <!-- TOOLS AUTO-LOADED FROM tools-data.js -->
         <div class="tools-grid" id="homeToolsGrid"></div>
         <div class="section-cta">
             <a href="tools.html" class="btn btn-outline btn-large">
@@ -141,12 +252,12 @@
     </div>
 </section>
 
+<!-- WHY CHOOSE US -->
 <section class="section bg-gradient" id="features">
     <div class="container">
         <div class="section-header">
             <span class="section-badge">✨ Why Choose Us</span>
             <h2 class="section-title">Built for <span class="gradient-text">Excellence</span></h2>
-            <p class="section-subtitle">Premium quality tools backed by expert support</p>
         </div>
         <div class="features-grid">
             <div class="feature-box">
@@ -179,10 +290,10 @@
             </div>
             <div class="feature-box">
                 <div class="feature-icon" style="background: linear-gradient(135deg, #30cfd0, #330867);">
-                    <i class="fas fa-palette"></i>
+                    <i class="fas fa-undo"></i>
                 </div>
-                <h3>Beautiful Design</h3>
-                <p>Modern dashboards with glass effects, gradients & professional UI design.</p>
+                <h3>30-Day Refund</h3>
+                <p>Not satisfied? Get 100% money back within 30 days. No questions asked!</p>
             </div>
             <div class="feature-box">
                 <div class="feature-icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
@@ -195,42 +306,19 @@
     </div>
 </section>
 
-<section class="section">
+<!-- REVIEWS / TESTIMONIALS -->
+<section class="section" id="reviews">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">💬 Reviews</span>
+            <span class="section-badge">💬 Customer Reviews</span>
             <h2 class="section-title">What Our <span class="gradient-text">Users Say</span></h2>
             <p class="section-subtitle">Trusted by 500+ happy customers worldwide</p>
         </div>
-        <div class="testimonials-grid">
-            <div class="testimonial">
-                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"The File Management Dashboard saved me 5+ hours every week! Beautiful design and just works perfectly. Best investment ever!"</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">RS</div>
-                    <div><h4>Rahul Sharma</h4><p>Operations Manager • Mumbai</p></div>
-                </div>
-            </div>
-            <div class="testimonial">
-                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Shiwendu is amazing! Custom tool built in 2 days, exactly what I needed. Support is top-notch. Highly recommended!"</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">PK</div>
-                    <div><h4>Priya Kumari</h4><p>Chartered Accountant • Delhi</p></div>
-                </div>
-            </div>
-            <div class="testimonial">
-                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                <p class="testimonial-text">"Got the Pro plan and it's worth every rupee! All tools are professional quality. My team's productivity doubled!"</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">AM</div>
-                    <div><h4>Amit Mehta</h4><p>CEO • Tech Startup</p></div>
-                </div>
-            </div>
-        </div>
+        <div class="reviews-grid-enhanced" id="reviewsGrid"></div>
     </div>
 </section>
 
+<!-- PRICING -->
 <section class="section bg-dark" id="pricing">
     <div class="container">
         <div class="section-header">
@@ -248,9 +336,8 @@
                     <li><i class="fas fa-check"></i> Lifetime License</li>
                     <li><i class="fas fa-check"></i> Email Support</li>
                     <li><i class="fas fa-check"></i> Free Updates</li>
-                    <li><i class="fas fa-check"></i> Video Tutorial</li>
                 </ul>
-                <a href="https://wa.me/919038338852?text=I%20want%20Starter%20Plan" class="btn btn-outline-white">Get Started</a>
+                <a href="tools.html" class="btn btn-outline-white">Get Started</a>
             </div>
             <div class="pricing-card featured">
                 <div class="popular-tag">🔥 MOST POPULAR</div>
@@ -262,7 +349,6 @@
                     <li><i class="fas fa-check"></i> Priority Support</li>
                     <li><i class="fas fa-check"></i> Custom Tools (2/yr)</li>
                     <li><i class="fas fa-check"></i> WhatsApp + Phone</li>
-                    <li><i class="fas fa-check"></i> Commercial License</li>
                 </ul>
                 <a href="https://wa.me/919038338852?text=I%20want%20Pro%20Plan" class="btn btn-primary">Get Pro Now</a>
             </div>
@@ -275,7 +361,6 @@
                     <li><i class="fas fa-check"></i> 10 User Licenses</li>
                     <li><i class="fas fa-check"></i> Custom Development</li>
                     <li><i class="fas fa-check"></i> Training Sessions</li>
-                    <li><i class="fas fa-check"></i> Dedicated Manager</li>
                 </ul>
                 <a href="https://wa.me/919038338852?text=I%20want%20Enterprise%20Plan" class="btn btn-outline-white">Contact Sales</a>
             </div>
@@ -283,23 +368,25 @@
     </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section">
     <div class="container">
         <div class="cta-content">
             <h2>Ready to <span class="gradient-text">Supercharge</span> Your Productivity?</h2>
-            <p>Join 500+ professionals saving 10+ hours every week with SS Tools Hub</p>
+            <p>Join 500+ professionals saving 10+ hours every week</p>
             <div class="cta-buttons">
                 <a href="tools.html" class="btn btn-primary btn-large">
                     <i class="fas fa-rocket"></i> Browse All Tools
                 </a>
                 <a href="https://wa.me/919038338852" class="btn btn-glass btn-large">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                    <i class="fab fa-whatsapp"></i> Chat Now
                 </a>
             </div>
         </div>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer" id="contact">
     <div class="container">
         <div class="footer-grid">
@@ -308,13 +395,11 @@
                     <div class="logo-box"><span>SS</span></div>
                     <div class="logo-text"><span class="brand">Tools Hub</span></div>
                 </a>
-                <p class="footer-desc">Premium Excel VBA tools and automation solutions to boost your productivity. Made with ❤️ in India.</p>
+                <p class="footer-desc">Premium Excel VBA tools and automation. Made with ❤️ in India.</p>
                 <div class="social-links">
                     <a href="https://wa.me/919038338852"><i class="fab fa-whatsapp"></i></a>
                     <a href="mailto:shiwendu@zohomail.in"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+919038338852"><i class="fas fa-phone"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -322,26 +407,24 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="tools.html">All Tools</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#features">Features</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Popular Tools</h4>
+                <h4>Support</h4>
                 <ul>
-                    <li><a href="tools.html">File Manager</a></li>
-                    <li><a href="tools.html">Sales Analytics</a></li>
-                    <li><a href="tools.html">Data Cleaner</a></li>
-                    <li><a href="tools.html">Email Automation</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="https://wa.me/919038338852">WhatsApp</a></li>
+                    <li><a href="mailto:shiwendu@zohomail.in">Email</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contact Info</h4>
+                <h4>Contact</h4>
                 <ul class="contact-info">
                     <li><i class="fas fa-user"></i> Shiwendu Founder</li>
                     <li><i class="fas fa-envelope"></i> <a href="mailto:shiwendu@zohomail.in">shiwendu@zohomail.in</a></li>
                     <li><i class="fas fa-phone"></i> <a href="tel:+919038338852">+91 9038338852</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> India</li>
                 </ul>
             </div>
         </div>
@@ -351,7 +434,7 @@
     </div>
 </footer>
 
-<a href="https://wa.me/919038338852?text=Hi%20Shiwendu" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/919038338852" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
     <span class="float-text">Chat with us</span>
 </a>
@@ -387,17 +470,6 @@ const observer = new IntersectionObserver((entries) => {
 
 const statsBar = document.querySelector('.stats-bar');
 if (statsBar) observer.observe(statsBar);
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
 
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
