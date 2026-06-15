@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Payment - SS Tools Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="bg-animation">
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+</div>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <div class="logo-box"><span>SS</span></div>
+            <div class="logo-text">
+                <span class="brand">Tools Hub</span>
+                <span class="tagline">Premium Excel Tools</span>
+            </div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="cart.html" class="nav-cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart 
+                <span class="nav-cart-badge">0</span>
+            </a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section" style="padding-top: 120px;">
+    <div class="container" style="max-width: 800px;">
+        <div class="payment-container">
+            
+            <!-- HEADER -->
+            <div class="payment-header">
+                <div class="payment-icon-large">💳</div>
+                <h1>Complete Your Payment</h1>
+                <p>Pay securely via UPI • Get tools instantly!</p>
+            </div>
+            
+            <!-- ORDER SUMMARY -->
+            <div class="payment-order-summary" id="orderSummary">
+                <h3><i class="fas fa-shopping-bag"></i> Your Order</h3>
+                <div id="orderItems"></div>
+                <div class="order-total">
+                    <span>Total Amount:</span>
+                    <span class="total-amount" id="totalAmount">₹0</span>
+                </div>
+            </div>
+            
+            <!-- PAYMENT METHODS -->
+            <div class="payment-methods-section">
+                <h3><i class="fas fa-mobile-alt"></i> Pay via UPI</h3>
+                <p class="payment-subtitle">Quick, Safe & Easy Payment</p>
+                
+                <!-- QR CODE -->
+                <div class="qr-section">
+                    <div class="qr-code-box">
+                        <img id="qrCodeImage" src="" alt="UPI QR Code" />
+                        <p class="qr-label">📱 Scan QR Code to Pay</p>
+                    </div>
+                    
+                    <div class="qr-divider">
+                        <span>OR</span>
+                    </div>
+                    
+                    <div class="upi-id-section">
+                        <p class="upi-label">Pay to UPI ID:</p>
+                        <div class="upi-id-box">
+                            <span id="upiIdDisplay">9038338852@ybl</span>
+                            <button onclick="copyUpiId()" class="btn-copy">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                        </div>
+                        <p class="merchant-name">Shiwendu Shekhar (SS Tools Hub)</p>
+                    </div>
+                </div>
+                
+                <!-- UPI APPS QUICK PAY -->
+                <div class="upi-apps-section">
+                    <p class="apps-label">Or pay via your favorite UPI app:</p>
+                    <div class="upi-apps-grid">
+                        <a href="#" onclick="openUpiApp('gpay')" class="upi-app-btn">
+                            <div class="app-icon" style="background: #4285F4;">
+                                <i class="fab fa-google-pay"></i>
+                            </div>
+                            <span>Google Pay</span>
+                        </a>
+                        <a href="#" onclick="openUpiApp('phonepe')" class="upi-app-btn">
+                            <div class="app-icon" style="background: #5F259F;">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span>PhonePe</span>
+                        </a>
+                        <a href="#" onclick="openUpiApp('paytm')" class="upi-app-btn">
+                            <div class="app-icon" style="background: #00BAF2;">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <span>Paytm</span>
+                        </a>
+                        <a href="#" onclick="openUpiApp('bhim')" class="upi-app-btn">
+                            <div class="app-icon" style="background: #FF6B35;">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <span>BHIM UPI</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- INSTRUCTIONS -->
+            <div class="payment-instructions">
+                <h3><i class="fas fa-info-circle"></i> How to Complete Order</h3>
+                <div class="instruction-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Pay via UPI</strong>
+                            <p>Scan QR or use UPI ID to pay ₹<span id="payAmount">0</span></p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Take Screenshot</strong>
+                            <p>Save the payment success screenshot</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Send on WhatsApp</strong>
+                            <p>Send screenshot + your email for delivery</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Get Tools Instantly!</strong>
+                            <p>Receive tools via email/WhatsApp in 5 minutes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WHATSAPP BUTTON -->
+            <div class="payment-whatsapp-section">
+                <h3>✅ After Payment - Send Confirmation</h3>
+                <p>Click below to send payment screenshot on WhatsApp</p>
+                <button onclick="sendPaymentConfirmation()" class="btn-whatsapp-confirm">
+                    <i class="fab fa-whatsapp"></i> Send Payment Confirmation
+                </button>
+            </div>
+            
+            <!-- TRUST BADGES -->
+            <div class="payment-trust">
+                <div class="trust-badge-payment">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Secure UPI</span>
+                </div>
+                <div class="trust-badge-payment">
+                    <i class="fas fa-bolt"></i>
+                    <span>Instant Delivery</span>
+                </div>
+                <div class="trust-badge-payment">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Support</span>
+                </div>
+                <div class="trust-badge-payment">
+                    <i class="fas fa-undo"></i>
+                    <span>Money Back Guarantee</span>
+                </div>
+            </div>
+            
+            <!-- HELP -->
+            <div class="payment-help">
+                <p>Need help? <a href="https://wa.me/919038338852">Chat on WhatsApp</a> or call <a href="tel:+919038338852">+91 9038338852</a></p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom" style="border-top: none;">
+            <p>© 2025 SS Tools Hub. Made with ❤️ by <strong>Shiwendu</strong></p>
+        </div>
+    </div>
+</footer>
+
+<script src="tools-data.js"></script>
+<script>
+
+// ==========================================
+// UPI PAYMENT CONFIGURATION
+// CHANGE THESE WITH YOUR REAL DETAILS
+// ==========================================
+const UPI_CONFIG = {
+    upiId: "9038338852@ybl",  // ← CHANGE TO YOUR UPI ID
+    merchantName: "Shiwendu Shekhar",  // ← Your Name
+    businessName: "SS Tools Hub"  // ← Business Name
+};
+// ==========================================
+
+let orderAmount = 0;
+let orderDetails = '';
+
+// Load order on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadOrder();
+});
+
+function loadOrder() {
+    const cart = getCart();
+    
+    if (cart.length === 0) {
+        document.querySelector('.payment-container').innerHTML = `
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <h2>No items in cart!</h2>
+                <p>Please add tools to cart first</p>
+                <a href="tools.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i> Browse Tools
+                </a>
+            </div>
+        `;
+        return;
+    }
+    
+    const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+    let discount = 0;
+    
+    if (appliedCoupon) {
+        if (appliedCoupon.type === 'percent') {
+            discount = Math.round(subtotal * appliedCoupon.discount / 100);
+        } else {
+            discount = appliedCoupon.discount;
+        }
+    }
+    
+    orderAmount = subtotal - discount;
+    
+    // Display order items
+    const itemsHTML = cart.map(item => `
+        <div class="order-item">
+            <div class="order-item-info">
+                <i class="${item.icon}" style="color: var(--primary);"></i>
+                <span>${item.name}</span>
+            </div>
+            <span class="order-item-price">₹${item.price.toLocaleString('en-IN')}</span>
+        </div>
+    `).join('');
+    
+    document.getElementById('orderItems').innerHTML = itemsHTML;
+    document.getElementById('totalAmount').textContent = `₹${orderAmount.toLocaleString('en-IN')}`;
+    document.getElementById('payAmount').textContent = orderAmount.toLocaleString('en-IN');
+    document.getElementById('upiIdDisplay').textContent = UPI_CONFIG.upiId;
+    
+    // Generate QR Code
+    generateQRCode(orderAmount);
+    
+    // Store order details
+    orderDetails = cart.map((item, i) => 
+        `${i+1}. ${item.name} - ₹${item.price.toLocaleString('en-IN')}`
+    ).join('\n');
+}
+
+function generateQRCode(amount) {
+    // Generate UPI payment URL
+    const upiUrl = `upi://pay?pa=${UPI_CONFIG.upiId}&pn=${encodeURIComponent(UPI_CONFIG.merchantName)}&am=${amount}&cu=INR&tn=${encodeURIComponent('SS Tools Hub Order')}`;
+    
+    // Generate QR code image URL (using free QR code API)
+    const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiUrl)}`;
+    
+    document.getElementById('qrCodeImage').src = qrApiUrl;
+}
+
+function copyUpiId() {
+    const upiId = UPI_CONFIG.upiId;
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(upiId).then(() => {
+        showNotification('✅ UPI ID copied!', 'success');
+    }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = upiId;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showNotification('✅ UPI ID copied!', 'success');
+    });
+}
+
+function openUpiApp(app) {
+    const amount = orderAmount;
+    const note = encodeURIComponent('SS Tools Hub Order');
+    const name = encodeURIComponent(UPI_CONFIG.merchantName);
+    
+    let upiUrl = '';
+    
+    switch(app) {
+        case 'gpay':
+            upiUrl = `tez://upi/pay?pa=${UPI_CONFIG.upiId}&pn=${name}&am=${amount}&cu=INR&tn=${note}`;
+            break;
+        case 'phonepe':
+            upiUrl = `phonepe://pay?pa=${UPI_CONFIG.upiId}&pn=${name}&am=${amount}&cu=INR&tn=${note}`;
+            break;
+        case 'paytm':
+            upiUrl = `paytmmp://pay?pa=${UPI_CONFIG.upiId}&pn=${name}&am=${amount}&cu=INR&tn=${note}`;
+            break;
+        case 'bhim':
+            upiUrl = `upi://pay?pa=${UPI_CONFIG.upiId}&pn=${name}&am=${amount}&cu=INR&tn=${note}`;
+            break;
+        default:
+            upiUrl = `upi://pay?pa=${UPI_CONFIG.upiId}&pn=${name}&am=${amount}&cu=INR&tn=${note}`;
+    }
+    
+    // Try to open app
+    window.location.href = upiUrl;
+    
+    showNotification(`Opening ${app.toUpperCase()}...`, 'info');
+}
+
+function sendPaymentConfirmation() {
+    const cart = getCart();
+    const orderId = 'SS' + Date.now().toString().slice(-8);
+    
+    let message = `💳 *PAYMENT CONFIRMATION - SS Tools Hub*\n\n`;
+    message += `Hi Shiwendu! I have made the payment.\n\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━━━\n`;
+    message += `📋 *Order ID:* ${orderId}\n`;
+    message += `💰 *Amount Paid:* ₹${orderAmount.toLocaleString('en-IN')}\n`;
+    message += `📅 *Date:* ${new Date().toLocaleDateString('en-IN')}\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    message += `🛒 *Items Purchased:*\n${orderDetails}\n\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    message += `📝 *My Details:*\n`;
+    message += `Name: \nEmail: \nPhone: \n\n`;
+    message += `📎 *I'm attaching the payment screenshot.*\n\n`;
+    message += `Please send the tools to my email. Thank you! 🙏`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+    
+    // Show success message
+    showNotification('✅ Opening WhatsApp...', 'success');
+    
+    // Clear cart after WhatsApp opens
+    setTimeout(() => {
+        if (confirm('Did you send the WhatsApp message? Click OK to clear cart.')) {
+            localStorage.removeItem('ssToolsCart');
+            updateCartBadge();
+            window.location.href = 'index.html';
+        }
+    }, 3000);
+}
+
+function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('active');
+}
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+});
+</script>
+
+</body>
+</html>
