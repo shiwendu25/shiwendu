@@ -1432,3 +1432,265 @@ button { cursor: pointer; font-family: inherit; border: none; }
     .tools-page-header h1 { font-size: 28px; }
     .btn-large { padding: 14px 24px; font-size: 14px; }
 }
+/* ============================================
+   ENHANCED GRAPHICS & ANIMATIONS
+   ============================================ */
+
+/* Stat icons */
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin: 0 auto 16px;
+    box-shadow: 0 8px 24px rgba(102,126,234,0.3);
+}
+
+/* Discount badge enhanced */
+.discount-badge {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(251,191,36,0.4);
+    font-weight: 800 !important;
+}
+
+/* Tool card hover effect enhancement */
+.tool-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.6s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tool-card:hover::before {
+    left: 100%;
+}
+
+/* Tool image animation */
+.tool-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-image::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tool-card:hover .tool-image::after {
+    opacity: 1;
+    animation: shine 1s ease-in-out;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tool icon bounce on hover */
+.tool-card:hover .tool-image i {
+    animation: iconBounce 0.6s ease-in-out;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px) scale(1.1); }
+}
+
+/* Pulse on filter buttons */
+.filter-btn.active {
+    animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 4px 16px rgba(102,126,234,0.4); }
+    50% { box-shadow: 0 4px 24px rgba(102,126,234,0.7); }
+}
+
+/* Feature box icon rotate on hover */
+.feature-box:hover .feature-icon {
+    transform: rotate(360deg);
+    transition: transform 0.6s ease;
+}
+
+/* Section badge animation */
+.section-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: badgeShine 3s infinite;
+}
+
+@keyframes badgeShine {
+    0% { left: -100%; }
+    50%, 100% { left: 100%; }
+}
+
+/* Buy button pulse */
+.btn-buy {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-buy::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-buy:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Floating cards enhanced */
+.floating-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.95);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.floating-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Testimonial card enhancement */
+.testimonial {
+    position: relative;
+}
+
+.testimonial::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 80px;
+    color: var(--primary);
+    opacity: 0.1;
+    font-family: serif;
+    line-height: 1;
+}
+
+/* Pricing card enhancement */
+.pricing-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient);
+}
+
+.pricing-card.featured::before {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+/* Navigation enhanced */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.logo-box {
+    transition: transform 0.3s;
+}
+
+.logo:hover .logo-box {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+/* WhatsApp float pulse */
+.whatsapp-float {
+    animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+    0%, 100% { box-shadow: 0 8px 24px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 8px 40px rgba(37,211,102,0.8); }
+}
+
+/* Hero title gradient animation */
+.gradient-text {
+    background: linear-gradient(90deg, #667eea, #764ba2, #f5576c, #667eea);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Smooth fade-in for cards */
+.tool-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background shapes animation enhanced */
+.bg-shape {
+    animation: float 20s infinite ease-in-out, glow 5s infinite;
+}
+
+@keyframes glow {
+    0%, 100% { filter: blur(80px) brightness(1); }
+    50% { filter: blur(80px) brightness(1.3); }
+}
