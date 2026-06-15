@@ -9,20 +9,18 @@ const WHATSAPP_NUMBER = "919038338852";
 // CURRENT OFFER (Set to null to disable)
 const CURRENT_OFFER = {
     enabled: true,
-    title: "🔥 FLASH SALE - 50% OFF",
-    description: "Limited time offer! Use code FLASH50",
-    endDate: "2025-12-31T23:59:59", // YYYY-MM-DDTHH:MM:SS
-    couponCode: "FLASH50",
-    discountPercent: 50
+    title: "🔥 FLASH SALE - 20% OFF",
+    description: "Limited time offer! Use code FLASH20",
+    endDate: "2026-06-30T23:59:59", // YYYY-MM-DDTHH:MM:SS
+    couponCode: "FLASH20",
+    discountPercent: 20
 };
 
 // COUPON CODES
 const COUPONS = {
     "WELCOME10": { discount: 10, type: "percent", description: "10% off for new customers" },
-    "FLASH50": { discount: 50, type: "percent", description: "50% Flash Sale" },
-    "BULK20": { discount: 20, type: "percent", description: "20% off on 2+ tools", minItems: 2 },
-    "BUNDLE30": { discount: 30, type: "percent", description: "30% off on 3+ tools", minItems: 3 },
-    "MEGA50": { discount: 5000, type: "fixed", description: "₹5000 off on orders above ₹15000", minAmount: 15000 }
+    "FLASH20": { discount: 20, type: "percent", description: "20% Flash Sale" },
+    "BULK25": { discount: 25, type: "percent", description: "25% off on 2+ tools", minItems: 2 },
 };
 
 // TOOLS DATA
@@ -37,7 +35,7 @@ const toolsData = [
         gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
         image: null, // Add image URL when available
         oldPrice: 2999,
-        newPrice: 999,
+        newPrice: 1099,
         rating: 5,
         reviews: 127,
         badge: "BESTSELLER",
@@ -79,24 +77,24 @@ const toolsData = [
     },
     {
         id: 3,
-        name: "Data Cleaner Suite",
-        category: "Data Tools",
-        description: "Clean messy data instantly! Remove duplicates, fix formats, standardize entries with one click.",
-        longDescription: "The ultimate data cleaning solution that handles duplicates, format errors, and standardization automatically.",
+        name: "Excel Merge feature",
+        category: "Merge Tools Tools",
+        description: "Merge more than one sheet to many sheet with one click.",
+        longDescription: "Excel merger one workbook & one worksheet to many sheet with one click ",
         icon: "fas fa-database",
         gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
         image: null,
-        oldPrice: 1999,
-        newPrice: 799,
+        oldPrice: 999,
+        newPrice: 299,
         rating: 5,
         reviews: 156,
         badge: "HOT",
         badgeIcon: "🔥",
         badgeColor: "hot",
-        features: ["Remove Dupes", "Fix Formats", "Validation"],
+        features: ["Excel Merge", "Fix header", "Validation"],
         beforeAfter: {
-            before: "Days of manual data cleaning",
-            after: "Clean data in seconds!"
+            before: "Hours of manual data merge",
+            after: "merge data in seconds!"
         },
         popular: false,
         showOnHome: true,
@@ -104,10 +102,10 @@ const toolsData = [
     },
     {
         id: 4,
-        name: "Email Automation Pro",
-        category: "Email Tools",
-        description: "Send personalized bulk emails from Excel with attachments, templates & tracking.",
-        longDescription: "Send thousands of personalized emails with attachments, track opens, and manage campaigns from Excel.",
+        name: "Email Automation Task ",
+        category: "Email Due date reminder Tools",
+        description: "Send personalized bulk emails from Excel with Due date reminder, task details & tracking & many more feature",
+        longDescription: "Send thousands of task due date & auto send feature through outlook, track opens, and manage campaigns from Excel.",
         icon: "fas fa-envelope-open-text",
         gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
         image: null,
@@ -116,10 +114,10 @@ const toolsData = [
         rating: 5,
         reviews: 94,
         badge: null,
-        features: ["Bulk Email", "Mail Merge", "Templates"],
+        features: ["Bulk Task Email ", "Due Date tracking", "Auto Email"],
         beforeAfter: {
-            before: "Sending emails one by one",
-            after: "1000+ emails in 1 click!"
+            before: "Sending emails one by one" & "Manual task tracking ",
+            after: "1000+ emails task in 1 click!"
         },
         popular: false,
         showOnHome: true,
