@@ -12,7 +12,7 @@ const toolsData = [
         icon: "fas fa-folder-tree",
         gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
         oldPrice: 2999,
-        newPrice: 999,
+        newPrice: 1099,
         rating: 5,
         reviews: 127,
         badge: "BESTSELLER",
