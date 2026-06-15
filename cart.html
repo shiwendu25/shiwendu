@@ -15,7 +15,6 @@
     <div class="bg-shape shape-2"></div>
 </div>
 
-<!-- NAVIGATION -->
 <nav class="navbar">
     <div class="container nav-container">
         <a href="index.html" class="logo">
@@ -28,318 +27,189 @@
         <ul class="nav-menu" id="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="tools.html">Tools</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html" class="active">
-                🛒 Cart <span class="nav-cart-badge" id="navCartCount">0</span>
+            <li><a href="cart.html" class="active nav-cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart 
+                <span class="nav-cart-badge">0</span>
+            </a></li>
+            <li><a href="https://wa.me/919038338852" class="btn-nav">
+                <i class="fab fa-whatsapp"></i> WhatsApp
             </a></li>
         </ul>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
     </div>
 </nav>
 
-<!-- PAGE HEADER -->
-<section class="page-header">
+<section class="section" style="padding-top: 120px;">
     <div class="container">
-        <div class="page-header-content">
-            <div class="hero-badge" style="margin-bottom: 20px;">
-                <i class="fas fa-shopping-cart"></i> Your Cart
-            </div>
-            <h1>Shopping <span class="gradient-text">Cart</span></h1>
-            <p>Review your selected tools and checkout</p>
-        </div>
-    </div>
-</section>
-
-<!-- CART CONTENT -->
-<section class="section" style="padding-top: 20px;">
-    <div class="container">
+        <h1 style="text-align: center; font-size: 42px; margin-bottom: 12px;">
+            🛒 Your <span class="gradient-text">Cart</span>
+        </h1>
+        <p style="text-align: center; color: #718096; margin-bottom: 40px;">Review your order before checkout</p>
         
-        <!-- EMPTY CART -->
-        <div id="emptyCart" class="empty-cart" style="display: none;">
-            <div class="empty-cart-icon">🛒</div>
-            <h2>Your cart is empty</h2>
-            <p>Start adding amazing tools to boost your productivity!</p>
-            <a href="tools.html" class="btn btn-primary btn-large">
-                <i class="fas fa-shopping-bag"></i> Browse Tools
-            </a>
-        </div>
-
-        <!-- CART WITH ITEMS -->
-        <div id="cartWithItems" class="cart-layout">
-            
-            <!-- Cart Items -->
-            <div class="cart-items-section">
-                <div class="cart-section-header">
-                    <h2>Cart Items (<span id="itemCount">0</span>)</h2>
-                    <button class="btn-clear-cart" onclick="clearCart()">
-                        <i class="fas fa-trash"></i> Clear Cart
-                    </button>
-                </div>
-                
-                <div id="cartItemsList">
-                    <!-- Items will be loaded here -->
-                </div>
-                
-                <a href="tools.html" class="btn-continue-shopping">
-                    <i class="fas fa-arrow-left"></i> Continue Shopping
-                </a>
-            </div>
-
-            <!-- Order Summary -->
-            <div class="cart-summary">
-                <div class="summary-card">
-                    <h3>Order Summary</h3>
-                    
-                    <div class="summary-row">
-                        <span>Subtotal (<span id="summaryCount">0</span> items)</span>
-                        <span id="summarySubtotal">₹0</span>
-                    </div>
-                    
-                    <div class="summary-row discount-row">
-                        <span>You Save</span>
-                        <span id="summaryDiscount" class="discount-amount">-₹0</span>
-                    </div>
-                    
-                    <!-- Coupon Code -->
-                    <div class="coupon-section">
-                        <input type="text" id="couponCode" placeholder="Enter coupon code">
-                        <button onclick="applyCoupon()">Apply</button>
-                    </div>
-                    <div id="couponMessage"></div>
-                    
-                    <div class="summary-row">
-                        <span>Coupon Discount</span>
-                        <span id="couponDiscount">₹0</span>
-                    </div>
-                    
-                    <div class="summary-row total-row">
-                        <span>Total Amount</span>
-                        <span id="summaryTotal">₹0</span>
-                    </div>
-                    
-                    <button class="btn-checkout" onclick="proceedToCheckout()">
-                        <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
-                    </button>
-                    
-                    <div class="payment-methods">
-                        <p style="text-align: center; color: #64748b; font-size: 13px; margin-bottom: 12px;">
-                            <i class="fas fa-shield-check" style="color: #10b981;"></i> Secure Payment
-                        </p>
-                        <div class="payment-icons">
-                            <span>💳 UPI</span>
-                            <span>🏦 Bank</span>
-                            <span>💰 PayTM</span>
-                            <span>📱 PhonePe</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trust Badges -->
-                <div class="trust-badges">
-                    <div class="trust-badge">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>7-Day Refund</span>
-                    </div>
-                    <div class="trust-badge">
-                        <i class="fas fa-bolt"></i>
-                        <span>Instant Delivery</span>
-                    </div>
-                    <div class="trust-badge">
-                        <i class="fas fa-headset"></i>
-                        <span>24/7 Support</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="cartContainer"></div>
     </div>
 </section>
 
 <footer class="footer">
     <div class="container">
-        <div class="footer-bottom">
+        <div class="footer-bottom" style="border-top: none;">
             <p>© 2025 SS Tools Hub. Made with ❤️ by <strong>Shiwendu</strong></p>
         </div>
     </div>
 </footer>
 
-<a href="https://wa.me/919038338852" class="whatsapp-float">
-    <i class="fab fa-whatsapp"></i>
-    <span class="float-text">Chat Now</span>
-</a>
-
 <script src="tools-data.js"></script>
-<script src="main.js"></script>
 <script>
-// Initialize cart page
-window.addEventListener('DOMContentLoaded', () => {
-    renderCart();
-});
-
-function renderCart() {
-    const cart = getCart();
-    
-    if (cart.length === 0) {
-        document.getElementById('emptyCart').style.display = 'block';
-        document.getElementById('cartWithItems').style.display = 'none';
-        return;
-    }
-    
-    document.getElementById('emptyCart').style.display = 'none';
-    document.getElementById('cartWithItems').style.display = 'grid';
-    
-    const itemsList = document.getElementById('cartItemsList');
-    let html = '';
-    
-    cart.forEach(item => {
-        const tool = toolsDatabase.find(t => t.id === item.id);
-        if (!tool) return;
-        
-        html += `
-            <div class="cart-item">
-                <div class="cart-item-image" style="background: ${tool.iconColor};">
-                    ${tool.image ? 
-                        `<img src="${tool.image}" alt="${tool.name}" onerror="this.style.display='none'">` :
-                        `<i class="fas ${tool.icon}"></i>`
-                    }
-                </div>
-                <div class="cart-item-details">
-                    <div class="cart-item-category">${tool.categoryName}</div>
-                    <h3>${tool.name}</h3>
-                    <p>${tool.description}</p>
-                    <div class="cart-item-features">
-                        ${tool.features.slice(0, 3).map(f => 
-                            `<span><i class="fas fa-check"></i> ${f}</span>`
-                        ).join('')}
-                    </div>
-                </div>
-                <div class="cart-item-pricing">
-                    <div class="cart-item-old-price">₹${tool.oldPrice.toLocaleString('en-IN')}</div>
-                    <div class="cart-item-price">₹${tool.newPrice.toLocaleString('en-IN')}</div>
-                    <button class="btn-remove" onclick="removeFromCart(${tool.id})">
-                        <i class="fas fa-trash"></i> Remove
-                    </button>
-                </div>
-            </div>
-        `;
-    });
-    
-    itemsList.innerHTML = html;
-    updateSummary();
-}
-
-function updateSummary() {
-    const cart = getCart();
-    let subtotal = 0;
-    let originalTotal = 0;
-    
-    cart.forEach(item => {
-        const tool = toolsDatabase.find(t => t.id === item.id);
-        if (tool) {
-            subtotal += tool.newPrice;
-            originalTotal += tool.oldPrice;
-        }
-    });
-    
-    const savings = originalTotal - subtotal;
-    const couponDiscount = getCouponDiscount(subtotal);
-    const total = subtotal - couponDiscount;
-    
-    document.getElementById('itemCount').textContent = cart.length;
-    document.getElementById('summaryCount').textContent = cart.length;
-    document.getElementById('summarySubtotal').textContent = '₹' + subtotal.toLocaleString('en-IN');
-    document.getElementById('summaryDiscount').textContent = '-₹' + savings.toLocaleString('en-IN');
-    document.getElementById('couponDiscount').textContent = '-₹' + couponDiscount.toLocaleString('en-IN');
-    document.getElementById('summaryTotal').textContent = '₹' + total.toLocaleString('en-IN');
-}
-
-function clearCart() {
-    if (confirm('Remove all items from cart?')) {
-        localStorage.removeItem('sshub_cart');
-        localStorage.removeItem('sshub_coupon');
-        renderCart();
-        updateCartBadge();
-    }
-}
-
-// Coupon Codes
-const validCoupons = {
-    'WELCOME20': { discount: 20, type: 'percent', message: '🎉 20% OFF Applied!' },
-    'FLAT500': { discount: 500, type: 'flat', message: '💰 ₹500 OFF Applied!' },
-    'FIRST10': { discount: 10, type: 'percent', message: '✨ 10% OFF for first-time buyers!' },
-    'COMBO30': { discount: 30, type: 'percent', message: '🎁 30% OFF Combo Discount!' }
-};
-
-function applyCoupon() {
-    const code = document.getElementById('couponCode').value.toUpperCase().trim();
-    const messageDiv = document.getElementById('couponMessage');
-    
-    if (!code) {
-        messageDiv.innerHTML = '<p class="coupon-error">Please enter a coupon code</p>';
-        return;
-    }
-    
-    if (validCoupons[code]) {
-        localStorage.setItem('sshub_coupon', code);
-        messageDiv.innerHTML = `<p class="coupon-success">${validCoupons[code].message}</p>`;
-        updateSummary();
-    } else {
-        messageDiv.innerHTML = '<p class="coupon-error">❌ Invalid coupon code</p>';
-        localStorage.removeItem('sshub_coupon');
-    }
-}
-
-function getCouponDiscount(subtotal) {
-    const couponCode = localStorage.getItem('sshub_coupon');
-    if (!couponCode || !validCoupons[couponCode]) return 0;
-    
-    const coupon = validCoupons[couponCode];
-    if (coupon.type === 'percent') {
-        return Math.round(subtotal * coupon.discount / 100);
-    } else {
-        return Math.min(coupon.discount, subtotal);
-    }
-}
-
-function proceedToCheckout() {
-    const cart = getCart();
-    if (cart.length === 0) {
-        alert('Cart is empty!');
-        return;
-    }
-    
-    let subtotal = 0;
-    let itemsList = '';
-    
-    cart.forEach((item, index) => {
-        const tool = toolsDatabase.find(t => t.id === item.id);
-        if (tool) {
-            subtotal += tool.newPrice;
-            itemsList += `\n${index + 1}. ${tool.name} - ₹${tool.newPrice}`;
-        }
-    });
-    
-    const couponDiscount = getCouponDiscount(subtotal);
-    const total = subtotal - couponDiscount;
-    const couponCode = localStorage.getItem('sshub_coupon');
-    
-    let message = `🛒 *NEW ORDER - SS Tools Hub*\n\n*Items:*${itemsList}\n\n`;
-    message += `*Subtotal:* ₹${subtotal}\n`;
-    if (couponDiscount > 0) {
-        message += `*Coupon (${couponCode}):* -₹${couponDiscount}\n`;
-    }
-    message += `*Total:* ₹${total}\n\n`;
-    message += `*Please send me payment details to complete the order.*\n\nThank you!`;
-    
-    const whatsappUrl = `https://wa.me/${contactInfo.phone}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-}
-
 function toggleMenu() {
     document.getElementById('navMenu').classList.toggle('active');
 }
+
+function renderCart() {
+    const cart = getCart();
+    const container = document.getElementById('cartContainer');
+    
+    if (cart.length === 0) {
+        container.innerHTML = `
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <h2>Your Cart is Empty</h2>
+                <p>Add some amazing tools to get started!</p>
+                <a href="tools.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i> Browse Tools
+                </a>
+            </div>
+        `;
+        return;
+    }
+    
+    const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+    const oldTotal = cart.reduce((sum, item) => sum + item.oldPrice, 0);
+    const savings = oldTotal - subtotal;
+    
+    let discount = 0;
+    if (appliedCoupon) {
+        if (appliedCoupon.type === 'percent') {
+            discount = Math.round(subtotal * appliedCoupon.discount / 100);
+        } else {
+            discount = appliedCoupon.discount;
+        }
+    }
+    
+    const total = subtotal - discount;
+    
+    const itemsHTML = cart.map(item => `
+        <div class="cart-item">
+            <div class="cart-item-image" style="background: ${item.gradient};">
+                <i class="${item.icon}"></i>
+            </div>
+            <div class="cart-item-details">
+                <h3>${item.name}</h3>
+                <div class="cart-item-category">${item.category}</div>
+                <div class="cart-item-pricing-row">
+                    <span class="price-old">₹${item.oldPrice.toLocaleString('en-IN')}</span>
+                    <span class="price-new">₹${item.price.toLocaleString('en-IN')}</span>
+                </div>
+            </div>
+            <button onclick="removeFromCart(${item.id})" class="btn-remove">
+                <i class="fas fa-trash"></i> Remove
+            </button>
+        </div>
+    `).join('');
+    
+    container.innerHTML = `
+        <div class="cart-layout">
+            <div class="cart-items-section">
+                <div class="cart-section-header">
+                    <h2>Cart Items (${cart.length})</h2>
+                    <button onclick="clearCart()" class="btn-clear-cart">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+                ${itemsHTML}
+                <a href="tools.html" class="btn-continue-shopping">
+                    <i class="fas fa-arrow-left"></i> Continue Shopping
+                </a>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Original Price:</span>
+                        <span>₹${oldTotal.toLocaleString('en-IN')}</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount:</span>
+                        <span class="discount-amount">-₹${savings.toLocaleString('en-IN')}</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span>₹${subtotal.toLocaleString('en-IN')}</span>
+                    </div>
+                    
+                    <div class="coupon-section">
+                        <input type="text" id="couponInput" placeholder="Enter coupon code">
+                        <button onclick="applyCoupon()">Apply</button>
+                    </div>
+                    <div id="couponMessage"></div>
+                    
+                    ${appliedCoupon ? `
+                        <div class="summary-row">
+                            <span>Coupon (${appliedCoupon.code}):</span>
+                            <span class="discount-amount">-₹${discount.toLocaleString('en-IN')}</span>
+                        </div>
+                    ` : ''}
+                    
+                    <div class="summary-row total-row">
+                        <span>Total:</span>
+                        <span>₹${total.toLocaleString('en-IN')}</span>
+                    </div>
+                    
+                    <button onclick="checkoutWhatsApp()" class="btn-checkout">
+                        <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+                    </button>
+                    
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-undo"></i>
+                            <span>30-Day Refund</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-bolt"></i>
+                            <span>Instant</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 16px; margin-top: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 12px;">🎁 Available Coupons:</h4>
+                    <div style="font-size: 13px; color: #718096; line-height: 1.8;">
+                        <strong>FLASH50</strong> - 50% Flash Sale<br>
+                        <strong>WELCOME10</strong> - 10% off first order<br>
+                        <strong>BULK20</strong> - 20% off on 2+ tools<br>
+                        <strong>BUNDLE30</strong> - 30% off on 3+ tools<br>
+                        <strong>MEGA50</strong> - ₹5000 off above ₹15000
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+document.addEventListener('DOMContentLoaded', renderCart);
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+});
 </script>
 
 </body>
