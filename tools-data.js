@@ -52,15 +52,15 @@ const toolsData = [
     },
     {
         id: 2,
-        name: "Sales Analytics Pro",
-        category: "Analytics",
+        name: "Depreciation Tool Based on Tally Prime",
+        category: "Depreciation Calculation ",
         description: "Advanced dashboard with real-time KPIs, interactive charts, forecasting & beautiful reports.",
-        longDescription: "Transform your sales data into actionable insights with stunning visualizations and AI-powered forecasting.",
+        longDescription: "Depreciation calculation through VBA tools based on Tally Prime.",
         icon: "fas fa-chart-line",
         gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
         image: null,
-        oldPrice: 3499,
-        newPrice: 1499,
+        oldPrice: 15499,
+        newPrice: 12499,
         rating: 5,
         reviews: 89,
         badge: "NEW",
@@ -69,7 +69,7 @@ const toolsData = [
         features: ["Real-time KPIs", "Charts", "Reports"],
         beforeAfter: {
             before: "Hours creating reports manually",
-            after: "Instant dashboards & insights!"
+            after: "Instant calculation & insights!"
         },
         popular: false,
         showOnHome: true,
@@ -143,7 +143,7 @@ const toolsData = [
             after: "Professional invoices instantly!"
         },
         popular: false,
-        showOnHome: true,
+        showOnHome: false,
         videoUrl: null
     },
     {
@@ -166,7 +166,7 @@ const toolsData = [
             after: "All-in-one Excel solution!"
         },
         popular: false,
-        showOnHome: true,
+        showOnHome: false,
         videoUrl: null
     }
 ];
