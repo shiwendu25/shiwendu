@@ -120,6 +120,12 @@ function renderCart() {
         </div>
     `).join('');
     
+    // Generate available coupons from tools-data.js
+    let couponsHTML = '';
+    for (const [code, coupon] of Object.entries(COUPONS)) {
+        couponsHTML += `<strong>${code}</strong> - ${coupon.description}<br>`;
+    }
+    
     container.innerHTML = `
         <div class="cart-layout">
             <div class="cart-items-section">
@@ -169,25 +175,25 @@ function renderCart() {
                         <span>₹${total.toLocaleString('en-IN')}</span>
                     </div>
                     
-                   <a href="payment.html" class="btn-checkout" style="text-decoration: none;">
-    <i class="fas fa-credit-card"></i> Proceed to Payment
-</a>
-<button onclick="checkoutWhatsApp()" class="btn-checkout" style="background: #25D366; margin-top: 12px;">
-    <i class="fab fa-whatsapp"></i> Or Order via WhatsApp
-</button>
+                    <a href="payment.html" class="btn-checkout" style="text-decoration: none;">
+                        <i class="fas fa-credit-card"></i> Proceed to Payment
+                    </a>
+                    <button onclick="checkoutWhatsApp()" class="btn-checkout" style="background: #25D366; margin-top: 12px;">
+                        <i class="fab fa-whatsapp"></i> Or Order via WhatsApp
+                    </button>
                     
                     <div class="trust-badges">
                         <div class="trust-badge">
                             <i class="fas fa-shield-alt"></i>
-                            <span>Secure</span>
-                        </div>
-                        <div class="trust-badge">
-                            <i class="fas fa-undo"></i>
-                            <span>30-Day Refund</span>
+                            <span>100% Secure</span>
                         </div>
                         <div class="trust-badge">
                             <i class="fas fa-bolt"></i>
-                            <span>Instant</span>
+                            <span>Instant Delivery</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Support</span>
                         </div>
                     </div>
                 </div>
@@ -195,11 +201,7 @@ function renderCart() {
                 <div style="background: white; padding: 20px; border-radius: 16px; margin-top: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
                     <h4 style="margin-bottom: 12px;">🎁 Available Coupons:</h4>
                     <div style="font-size: 13px; color: #718096; line-height: 1.8;">
-                        <strong>FLASH50</strong> - 50% Flash Sale<br>
-                        <strong>WELCOME10</strong> - 10% off first order<br>
-                        <strong>BULK20</strong> - 20% off on 2+ tools<br>
-                        <strong>BUNDLE30</strong> - 30% off on 3+ tools<br>
-                        <strong>MEGA50</strong> - ₹5000 off above ₹15000
+                        ${couponsHTML}
                     </div>
                 </div>
             </div>
