@@ -11,7 +11,7 @@ const CURRENT_OFFER = {
     enabled: true,
     title: "🔥 FLASH SALE - 20% OFF",
     description: "Limited time offer! Use code FLASH20",
-    endDate: "2026-06-30T23:59:59", // YYYY-MM-DDTHH:MM:SS
+    endDate: "2026-06-30T23:59:59",
     couponCode: "FLASH20",
     discountPercent: 20
 };
@@ -23,17 +23,19 @@ const COUPONS = {
     "BULK25": { discount: 25, type: "percent", description: "25% off on 2+ tools", minItems: 2 },
 };
 
-// TOOLS DATA
+// ============================================
+// TOOLS DATA - Professional Descriptions
+// ============================================
 const toolsData = [
     {
         id: 1,
         name: "File Management Dashboard",
         category: "File Management",
-        description: "All-in-one solution for renaming, importing, searching files with bulk operations & duplicate finder.",
-        longDescription: "Save 5+ hours every week with this powerful file management tool. Features include bulk rename, smart search, duplicate finder, and one-click file organization.",
+        description: "Powerful all-in-one Excel solution for bulk file operations, smart search, and intelligent duplicate detection.",
+        longDescription: "Transform your file management workflow with this professional Excel VBA tool. Features include bulk file renaming with custom patterns, advanced search across multiple folders, automatic duplicate detection with smart comparison, one-click file organization by type/date/size, and detailed file reporting. Save 5+ hours every week and eliminate manual file handling errors.",
         icon: "fas fa-folder-tree",
         gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        image: null, // Add image URL when available
+        image: null,
         oldPrice: 2999,
         newPrice: 1099,
         rating: 5,
@@ -43,20 +45,20 @@ const toolsData = [
         badgeColor: "default",
         features: ["6 Functions", "Bulk Operations", "Smart Search"],
         beforeAfter: {
-            before: "8 hours of manual file management",
-            after: "5 minutes with one click!"
+            before: "8 hours of manual file management daily",
+            after: "Complete in 5 minutes with one click!"
         },
         popular: true,
         showOnHome: true,
-        videoUrl: null // YouTube embed URL
+        videoUrl: null
     },
     {
         id: 2,
-        name: "Depreciation Tool Based on Tally Prime",
-        category: "Depreciation Calculation ",
-        description: "Advanced dashboard with real-time KPIs, interactive charts, forecasting & beautiful reports.",
-        longDescription: "Depreciation calculation through VBA tools based on Tally Prime.",
-        icon: "fas fa-chart-line",
+        name: "Depreciation Tool - Tally Prime Compatible",
+        category: "Accounting & Finance",
+        description: "Professional depreciation calculation tool fully compatible with Tally Prime, ensuring accurate fixed asset management.",
+        longDescription: "Streamline your depreciation calculations with this advanced VBA tool designed for accountants and finance professionals. Supports both SLM and WDV methods, complies with Companies Act 2013 and Income Tax Act, generates Tally Prime ready reports, automated journal entries, asset register maintenance, and comprehensive depreciation schedules. Perfect for businesses managing multiple fixed assets.",
+        icon: "fas fa-calculator",
         gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
         image: null,
         oldPrice: 8599,
@@ -66,10 +68,10 @@ const toolsData = [
         badge: "NEW",
         badgeIcon: "🆕",
         badgeColor: "new",
-        features: ["Real-time KPIs", "Charts", "Reports"],
+        features: ["Tally Compatible", "SLM & WDV", "Auto Reports"],
         beforeAfter: {
-            before: "Hours creating reports manually",
-            after: "Instant calculation & insights!"
+            before: "Hours of manual depreciation calculations",
+            after: "Instant accurate calculations with Tally export!"
         },
         popular: false,
         showOnHome: true,
@@ -77,11 +79,11 @@ const toolsData = [
     },
     {
         id: 3,
-        name: "Excel Merge feature",
-        category: "Merge Tools Tools",
-        description: "Merge more than one sheet to many sheet with one click.",
-        longDescription: "Excel merger one workbook & one worksheet to many sheet with one click ",
-        icon: "fas fa-database",
+        name: "Excel Merge Master",
+        category: "Data Tools",
+        description: "Merge multiple Excel workbooks or worksheets into one consolidated file with intelligent formatting preservation.",
+        longDescription: "The ultimate Excel merging solution for accountants, analysts, and data professionals. Combine multiple workbooks into one, merge worksheets within the same workbook, preserve all formatting and formulas, handle different headers intelligently, auto-detect data ranges, and create master consolidated reports. Save hours of manual copy-paste work.",
+        icon: "fas fa-object-group",
         gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
         image: null,
         oldPrice: 999,
@@ -91,10 +93,10 @@ const toolsData = [
         badge: "HOT",
         badgeIcon: "🔥",
         badgeColor: "hot",
-        features: ["Excel Merge", "Fix header", "Validation"],
+        features: ["Multi-File Merge", "Header Detection", "Format Preserved"],
         beforeAfter: {
-            before: "Hours of manual data merge",
-            after: "merge data in seconds!"
+            before: "Hours copying and pasting between files",
+            after: "Merge unlimited files in seconds!"
         },
         popular: false,
         showOnHome: true,
@@ -102,10 +104,10 @@ const toolsData = [
     },
     {
         id: 4,
-        name: "Email Automation Task ",
-        category: "Email Due date reminder Tools",
-        description: "Send personalized bulk emails from Excel with Due date reminder, task details & tracking & many more feature",
-        longDescription: "Send thousands of task due date & auto send feature through outlook, track opens, and manage campaigns from Excel.",
+        name: "Email Automation & Task Manager",
+        category: "Email Tools",
+        description: "Automated email system with due date reminders, task tracking, and bulk personalized email sending via Outlook.",
+        longDescription: "Revolutionize your email and task management with this powerful Excel automation tool. Features automated email reminders based on due dates, bulk personalized email sending through Outlook, task progress tracking, automatic follow-ups, customizable email templates, attachment support, and comprehensive reporting. Perfect for project managers, sales teams, and HR professionals.",
         icon: "fas fa-envelope-open-text",
         gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
         image: null,
@@ -114,10 +116,10 @@ const toolsData = [
         rating: 5,
         reviews: 94,
         badge: null,
-        features: ["Bulk Task Email ", "Due Date tracking", "Auto Email"],
+        features: ["Bulk Email", "Due Date Alerts", "Auto Follow-up"],
         beforeAfter: {
-            before: "Sending emails one by one" & "Manual task tracking ",
-            after: "1000+ emails task in 1 click!"
+            before: "Sending emails one-by-one and tracking manually",
+            after: "1000+ emails with auto-tracking in 1 click!"
         },
         popular: false,
         showOnHome: true,
@@ -125,10 +127,10 @@ const toolsData = [
     },
     {
         id: 5,
-        name: "Invoice Generator",
+        name: "Invoice Generator Pro",
         category: "Business",
-        description: "Professional invoices with custom templates, GST calculations & PDF export.",
-        longDescription: "Create stunning professional invoices with automatic GST calculations, custom branding, and instant PDF export.",
+        description: "Professional GST-compliant invoice generator with custom templates, automatic calculations, and PDF export.",
+        longDescription: "Create stunning professional invoices in seconds with this comprehensive invoicing solution. Features include GST calculations (CGST, SGST, IGST), multiple invoice templates, custom branding with logo, automatic invoice numbering, customer database, payment tracking, instant PDF export, and bulk invoice generation. Fully compliant with Indian GST regulations.",
         icon: "fas fa-file-invoice",
         gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
         image: null,
@@ -137,10 +139,10 @@ const toolsData = [
         rating: 5,
         reviews: 203,
         badge: null,
-        features: ["GST Calc", "PDF Export", "Templates"],
+        features: ["GST Compliant", "PDF Export", "Custom Templates"],
         beforeAfter: {
-            before: "Manual invoice creation",
-            after: "Professional invoices instantly!"
+            before: "30 minutes per invoice manually",
+            after: "Professional invoice in 30 seconds!"
         },
         popular: false,
         showOnHome: false,
@@ -148,26 +150,189 @@ const toolsData = [
     },
     {
         id: 6,
-        name: "GST Reconciliation",
-        category: "Reconciliation",
-        description: "GST Reconciliation Gstr 2B with Purchase Register",
-        long Description "Complete GST Reconciliation Gstr2B with Gstr3B"for small business & service,
-        icon: "fas fa-tasks",
+        name: "GST Reconciliation Tool",
+        category: "GST & Taxation",
+        description: "Complete GST reconciliation between GSTR-2B, GSTR-3B and Purchase Register with mismatch detection.",
+        longDescription: "Professional GST reconciliation tool for accountants and CAs. Automatically matches GSTR-2B with your Purchase Register, identifies mismatches, missing invoices, and rate differences. Generates detailed reconciliation reports, ITC eligible vs ineligible analysis, vendor-wise GST summary, and helps in accurate GSTR-3B filing. Saves days of manual reconciliation work.",
+        icon: "fas fa-file-invoice-dollar",
         gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
         image: null,
-        oldPrice: 2999,
-        newPrice: 1299,
+        oldPrice: 8999,
+        newPrice: 5599,
         rating: 5,
         reviews: 78,
-        badge: Hot,
-        features: ["Reconciliation ", "Reports"],
+        badge: "HOT",
+        badgeIcon: "🔥",
+        badgeColor: "hot",
+        features: ["GSTR-2B Match", "Auto Reports", "Mismatch Detection"],
         beforeAfter: {
-            before: "Manually reconciliation ",
-            after: "All-in-one Excel solution!"
+            before: "Days of manual GST reconciliation",
+            after: "Complete reconciliation in minutes!"
         },
         popular: false,
-        showOnHome: True,
+        showOnHome: true,
         videoUrl: null
+    },
+    {
+        id: 7,
+        name: "Vendor Reconciliation Master",
+        category: "Accounting & Finance",
+        description: "Automated vendor ledger reconciliation tool that matches your books with vendor statements instantly.",
+        longDescription: "Streamline your vendor reconciliation process with this intelligent matching tool. Automatically compares your purchase register with vendor ledger statements, identifies discrepancies, missing entries, and amount mismatches. Generates professional reconciliation statements, aging analysis, dispute reports, and helps maintain healthy vendor relationships. Essential tool for accounts payable teams.",
+        icon: "fas fa-handshake",
+        gradient: "linear-gradient(135deg, #fcb045 0%, #fd1d1d 100%)",
+        image: null,
+        oldPrice: 2499,
+        newPrice: 1599,
+        rating: 5,
+        reviews: 67,
+        badge: "NEW",
+        badgeIcon: "🆕",
+        badgeColor: "new",
+        features: ["Auto Matching", "Aging Analysis", "Dispute Reports"],
+        beforeAfter: {
+            before: "Days reconciling vendor accounts manually",
+            after: "Complete vendor reconciliation in minutes!"
+        },
+        popular: false,
+        showOnHome: true,
+        videoUrl: null
+    },
+    {
+        id: 8,
+        name: "Custom Tool Development",
+        category: "Custom Solutions",
+        description: "Need a specific Excel VBA tool for your business? Get a custom-built professional solution tailored to your needs.",
+        longDescription: "Get a fully customized Excel VBA tool designed specifically for your business requirements. Includes detailed requirement analysis, professional development by experienced VBA expert, multiple revisions, comprehensive testing, documentation, training, and 6 months free support. Perfect for unique business processes that off-the-shelf tools cannot solve. Delivery in 7-15 days.",
+        icon: "fas fa-magic",
+        gradient: "linear-gradient(135deg, #667eea 0%, #f093fb 100%)",
+        image: null,
+        oldPrice: 9999,
+        newPrice: 6999,
+        rating: 5,
+        reviews: 45,
+        badge: "CUSTOM",
+        badgeIcon: "✨",
+        badgeColor: "default",
+        features: ["Tailored Solution", "6 Months Support", "Free Revisions"],
+        beforeAfter: {
+            before: "Struggling with existing tools that don't fit",
+            after: "Perfect custom tool for YOUR business!"
+        },
+        popular: true,
+        showOnHome: true,
+        videoUrl: null
+    }
+];
+
+// ============================================
+// SERVICES DATA - NEW! (Taxation, Accounting, Finance)
+// ============================================
+const servicesData = [
+    {
+        id: 101,
+        name: "GST Return Filing",
+        category: "GST Services",
+        description: "Professional GST return filing services - GSTR-1, GSTR-3B, GSTR-9, GSTR-9C by qualified experts.",
+        longDescription: "Complete GST compliance services including monthly/quarterly return filing (GSTR-1, GSTR-3B), annual returns (GSTR-9, GSTR-9C), GST registration, amendments, refund applications, and notice handling. All filings done by experienced Chartered Accountants ensuring 100% accuracy and timely submission.",
+        icon: "fas fa-file-invoice-dollar",
+        gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        oldPrice: 2500,
+        newPrice: 1500,
+        priceLabel: "/month",
+        features: ["GSTR-1 & 3B", "Annual Returns", "Expert Filing"],
+        popular: true,
+        type: "service"
+    },
+    {
+        id: 102,
+        name: "TDS Return Filing",
+        category: "TDS Services",
+        description: "Complete TDS return filing services - Form 24Q, 26Q, 27Q with TDS certificate generation.",
+        longDescription: "Professional TDS compliance services including quarterly TDS returns (Form 24Q, 26Q, 27Q), TDS payment, certificate generation (Form 16, 16A), correction returns, and TDS reconciliation. Handled by experienced tax professionals ensuring compliance with latest Income Tax provisions.",
+        icon: "fas fa-receipt",
+        gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+        oldPrice: 3000,
+        newPrice: 2499,
+        priceLabel: "/quarter",
+        features: ["All TDS Forms", "Form 16/16A", "Quick Filing"],
+        popular: false,
+        type: "service"
+    },
+    {
+        id: 103,
+        name: "Income Tax Return Filing",
+        category: "Income Tax",
+        description: "ITR filing for salaried, business, and professional individuals by qualified Chartered Accountants.",
+        longDescription: "Expert Income Tax Return filing services for individuals, businesses, and professionals. Covers all ITR forms (ITR-1 to ITR-7), tax planning, deduction optimization, capital gains computation, foreign income reporting, and notice response. Maximum refund guaranteed with expert review.",
+        icon: "fas fa-file-alt",
+        gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+        oldPrice: 8500,
+        newPrice: 6499,
+        priceLabel: "/year",
+        features: ["All ITR Forms", "Tax Planning", "Maximum Refund"],
+        popular: true,
+        type: "service"
+    },
+    {
+        id: 104,
+        name: "PF Withdrawal Assistance",
+        category: "PF ",
+        description: "Complete EPF withdrawal and transfer services - Form 19, Form 10C, Form 31 with quick processing.",
+        longDescription: "End-to-end PF withdrawal assistance including final settlement (Form 19), pension withdrawal (Form 10C), partial withdrawal (Form 31), PF transfer, KYC updates, UAN activation, and grievance handling. Our experts ensure quick processing and resolve any PFO issues.",
+        icon: "fas fa-piggy-bank",
+        gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+        oldPrice: 999,
+        newPrice: 700,
+        priceLabel: "/service",
+        features: ["All PF Forms", "KYC Update", "Quick Processing"],
+        popular: false,
+        type: "service"
+    },
+    {
+        id: 105,
+        name: "Gst Registration",
+        category: "Registration",
+        description: "GST REGISTRATION.",
+        longDescription: "Comprehensive Gst registration services including ,PAN, TAN,and,post-incorporation compliance support.",
+        icon: "fas fa-building",
+        gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
+        oldPrice: 9999,
+        newPrice: 7999,
+        priceLabel: "/registration",
+        features: ["All Company Types", "Complete Docs", "Bank Account"],
+        popular: true,
+        type: "service"
+    },
+    {
+        id: 106,
+        name: "Accounting & Bookkeeping",
+        category: "Accounting",
+        description: "Monthly accounting and bookkeeping services in Tally Prime.",
+        longDescription: "Professional accounting services including daily bookkeeping, ledger maintenance, bank reconciliation, monthly financial statements, MIS reports, accounts receivable/payable management, inventory accounting, and year-end finalization. Compatible with Tally Prime, Zoho Books, QuickBooks.",
+        icon: "fas fa-book",
+        gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+        oldPrice: 7000,
+        newPrice: 4999,
+        priceLabel: "/month",
+        features: ["Tally", "MIS Reports", "Bank Reconciliation"],
+        popular: false,
+        type: "service"
+    },
+    {
+        id: 108,
+        name: "Tax Audit & Statutory Audit",
+        category: "Audit Services",
+        description: "Professional tax audit (44AB) and statutory audit services by qualified Chartered Accountants.",
+        longDescription: "Complete audit services including Tax Audit under section 44AB, Statutory Audit under Companies Act, Internal Audit, Stock Audit, and Concurrent Audit. Conducted by experienced Chartered Accountants ensuring compliance, identifying risks, and providing valuable business insights.",
+        icon: "fas fa-search-dollar",
+        gradient: "linear-gradient(135deg, #667eea 0%, #f093fb 100%)",
+        oldPrice: 15000,
+        newPrice: 9999,
+        priceLabel: "/audit",
+        features: ["Tax & Statutory", "CA Certified", "Risk Analysis"],
+        popular: false,
+        type: "service"
     }
 ];
 
@@ -191,7 +356,7 @@ const reviewsData = [
         location: "Delhi",
         rating: 5,
         text: "Shiwendu is amazing! Custom tool built in 2 days, exactly what I needed. Support is top-notch. Highly recommended!",
-        toolBought: "Invoice Generator",
+        toolBought: "Custom Tool Development",
         avatar: "PK",
         gradient: "linear-gradient(135deg, #f093fb, #f5576c)",
         verified: true,
@@ -202,8 +367,8 @@ const reviewsData = [
         role: "CEO",
         location: "Bangalore",
         rating: 5,
-        text: "Got the Pro plan and it's worth every rupee! All tools are professional quality. My team's productivity doubled!",
-        toolBought: "Pro Plan",
+        text: "GST Reconciliation tool is fantastic! Saved my CA team weeks of work. The accuracy is incredible!",
+        toolBought: "GST Reconciliation",
         avatar: "AM",
         gradient: "linear-gradient(135deg, #4facfe, #00f2fe)",
         verified: true,
@@ -211,11 +376,11 @@ const reviewsData = [
     },
     {
         name: "Sneha Reddy",
-        role: "Data Analyst",
+        role: "Chartered Accountant",
         location: "Hyderabad",
         rating: 5,
-        text: "Data Cleaner Suite is a lifesaver! Cleaned 10,000 rows in seconds. The validation feature catches everything!",
-        toolBought: "Data Cleaner Suite",
+        text: "Got my GST returns filed quickly and professionally. Their service is reliable and affordable!",
+        toolBought: "GST Return Filing Service",
         avatar: "SR",
         gradient: "linear-gradient(135deg, #fa709a, #fee140)",
         verified: true,
@@ -223,11 +388,11 @@ const reviewsData = [
     },
     {
         name: "Vikram Singh",
-        role: "Marketing Head",
+        role: "Business Owner",
         location: "Pune",
         rating: 5,
-        text: "Email Automation Pro is incredible! Sent 5000 personalized emails in minutes. Templates are beautiful!",
-        toolBought: "Email Automation Pro",
+        text: "Vendor reconciliation tool is a game changer! What used to take days now takes minutes.",
+        toolBought: "Vendor Reconciliation",
         avatar: "VS",
         gradient: "linear-gradient(135deg, #30cfd0, #330867)",
         verified: true,
@@ -235,11 +400,11 @@ const reviewsData = [
     },
     {
         name: "Anjali Gupta",
-        role: "Project Manager",
+        role: "Finance Manager",
         location: "Chennai",
         rating: 5,
-        text: "Project Tracker Pro replaced our expensive software! Gantt charts are stunning. Worth every rupee!",
-        toolBought: "Project Tracker Pro",
+        text: "Depreciation tool with Tally integration is exactly what I needed! Highly professional work by Shiwendu.",
+        toolBought: "Depreciation Tool",
         avatar: "AG",
         gradient: "linear-gradient(135deg, #a8edea, #fed6e3)",
         verified: true,
@@ -260,7 +425,7 @@ function saveCart(cart) {
 }
 
 function addToCart(toolId) {
-    const tool = toolsData.find(t => t.id === toolId);
+    const tool = toolsData.find(t => t.id === toolId) || servicesData.find(t => t.id === toolId);
     if (!tool) return;
     
     let cart = getCart();
@@ -283,8 +448,6 @@ function addToCart(toolId) {
     
     saveCart(cart);
     showNotification(`✅ ${tool.name} added to cart!`, 'success');
-    
-    // Update button
     setTimeout(() => location.reload(), 800);
 }
 
@@ -364,7 +527,7 @@ function applyCoupon() {
 }
 
 // ============================================
-// CHECKOUT VIA WHATSAPP (AUTO MESSAGE)
+// CHECKOUT VIA WHATSAPP
 // ============================================
 function checkoutWhatsApp() {
     const cart = getCart();
@@ -386,7 +549,6 @@ function checkoutWhatsApp() {
     
     const total = subtotal - discount;
     
-    // Generate beautiful WhatsApp message
     let message = `🛒 *NEW ORDER - SS Tools Hub* 🛒\n\n`;
     message += `Hi Shiwendu! I want to buy these tools:\n\n`;
     message += `━━━━━━━━━━━━━━━━━━━━━━\n`;
@@ -413,14 +575,11 @@ function checkoutWhatsApp() {
     message += `Please share payment details. Thank you! 🙏`;
     
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-    
-    window.open(whatsappUrl, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
 }
 
-// Single product WhatsApp message
 function buyNowWhatsApp(toolId) {
-    const tool = toolsData.find(t => t.id === toolId);
+    const tool = toolsData.find(t => t.id === toolId) || servicesData.find(t => t.id === toolId);
     if (!tool) return;
     
     let message = `🛒 *Product Inquiry - SS Tools Hub*\n\n`;
@@ -429,13 +588,38 @@ function buyNowWhatsApp(toolId) {
     message += `📦 *${tool.name}*\n`;
     message += `📁 Category: ${tool.category}\n`;
     message += `💰 Price: ~₹${tool.oldPrice.toLocaleString('en-IN')}~ → *₹${tool.newPrice.toLocaleString('en-IN')}*\n`;
-    message += `⭐ Rating: ${tool.rating}/5 (${tool.reviews} reviews)\n`;
+    if (tool.rating) {
+        message += `⭐ Rating: ${tool.rating}/5 (${tool.reviews} reviews)\n`;
+    }
     message += `━━━━━━━━━━━━━━━━━━━━━━\n\n`;
     message += `✨ *Features:*\n`;
     tool.features.forEach(f => {
         message += `✅ ${f}\n`;
     });
     message += `\nPlease share more details and payment options. Thank you! 🙏`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+}
+
+// Service inquiry WhatsApp message
+function inquireService(serviceId) {
+    const service = servicesData.find(s => s.id === serviceId);
+    if (!service) return;
+    
+    let message = `📋 *Service Inquiry - SS Tools Hub*\n\n`;
+    message += `Hi Shiwendu! I need this service:\n\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━━━\n`;
+    message += `🎯 *${service.name}*\n`;
+    message += `📁 Category: ${service.category}\n`;
+    message += `💰 Starting from: *₹${service.newPrice.toLocaleString('en-IN')}*${service.priceLabel || ''}\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    message += `✨ *Service Includes:*\n`;
+    service.features.forEach(f => {
+        message += `✅ ${f}\n`;
+    });
+    message += `\n📝 *About this service:*\n${service.description}\n\n`;
+    message += `Please share complete details, requirements & timeline. Thank you! 🙏`;
     
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
@@ -466,7 +650,6 @@ function createToolCard(tool) {
     const cartButtonText = inCart ? '<i class="fas fa-check"></i> In Cart' : '<i class="fas fa-cart-plus"></i> Add Cart';
     const cartButtonClass = inCart ? 'in-cart' : '';
     
-    // Tool image - if image URL provided, use it, otherwise use icon
     const imageHTML = tool.image ? 
         `<img src="${tool.image}" alt="${tool.name}" style="width: 100%; height: 100%; object-fit: cover;">` :
         `<i class="${tool.icon}"></i>`;
@@ -510,6 +693,53 @@ function createToolCard(tool) {
                     </button>
                     <button onclick="buyNowWhatsApp(${tool.id})" class="btn-buy-now">
                         <i class="fab fa-whatsapp"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// ============================================
+// CREATE SERVICE CARD (NEW!)
+// ============================================
+function createServiceCard(service) {
+    const discount = Math.round(((service.oldPrice - service.newPrice) / service.oldPrice) * 100);
+    const popularClass = service.popular ? 'popular' : '';
+    
+    const featuresHTML = service.features.map(f => 
+        `<span><i class="fas fa-check"></i> ${f}</span>`
+    ).join('');
+    
+    return `
+        <div class="tool-card service-card ${popularClass}" data-category="${service.category}" data-name="${service.name.toLowerCase()}">
+            ${service.popular ? '<div class="tool-ribbon">⭐ POPULAR</div>' : ''}
+            <div class="discount-badge">${discount}% OFF</div>
+            <div class="tool-image" style="background: ${service.gradient};">
+                <i class="${service.icon}"></i>
+            </div>
+            <div class="tool-content">
+                <div class="tool-category">${service.category}</div>
+                <h3 class="tool-name">${service.name}</h3>
+                <p class="tool-description">${service.description}</p>
+                
+                <div class="tool-features">
+                    ${featuresHTML}
+                </div>
+                
+                <div class="tool-bottom">
+                    <div class="tool-pricing">
+                        <span class="price-old">₹${service.oldPrice.toLocaleString('en-IN')}</span>
+                        <span class="price-new">₹${service.newPrice.toLocaleString('en-IN')}<small style="font-size:14px;color:#718096;">${service.priceLabel || ''}</small></span>
+                    </div>
+                    <div class="service-badge-cert">
+                        <i class="fas fa-certificate"></i> CA Certified
+                    </div>
+                </div>
+                
+                <div class="tool-actions">
+                    <button onclick="inquireService(${service.id})" class="btn-buy-now" style="grid-column: 1 / -1;">
+                        <i class="fab fa-whatsapp"></i> Get This Service
                     </button>
                 </div>
             </div>
@@ -562,6 +792,12 @@ function loadAllTools() {
     if (!container) return;
     container.innerHTML = toolsData.map(createToolCard).join('');
     updateResultsCount(toolsData.length);
+}
+
+function loadAllServices() {
+    const container = document.getElementById('servicesGrid');
+    if (!container) return;
+    container.innerHTML = servicesData.map(createServiceCard).join('');
 }
 
 function loadReviews() {
@@ -706,9 +942,9 @@ function startCountdown() {
 // ============================================
 const recentBuyers = [
     { name: "Rahul", city: "Mumbai", tool: "File Manager" },
-    { name: "Priya", city: "Delhi", tool: "Sales Analytics" },
-    { name: "Amit", city: "Bangalore", tool: "Data Cleaner" },
-    { name: "Sneha", city: "Pune", tool: "Email Automation" },
+    { name: "Priya", city: "Delhi", tool: "GST Return Filing" },
+    { name: "Amit", city: "Bangalore", tool: "Vendor Reconciliation" },
+    { name: "Sneha", city: "Pune", tool: "ITR Filing Service" },
     { name: "Vikram", city: "Chennai", tool: "Invoice Generator" }
 ];
 
@@ -734,10 +970,9 @@ function showRecentPurchase() {
     }, 5000);
 }
 
-// Show recent purchase every 30 seconds
 function initRecentPurchases() {
-    setTimeout(showRecentPurchase, 10000); // First after 10 seconds
-    setInterval(showRecentPurchase, 30000); // Then every 30 seconds
+    setTimeout(showRecentPurchase, 10000);
+    setInterval(showRecentPurchase, 30000);
 }
 
 // ============================================
@@ -747,6 +982,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadDarkMode();
     loadHomeTools();
     loadAllTools();
+    loadAllServices();
     loadReviews();
     updateCartBadge();
     startCountdown();
