@@ -11,7 +11,7 @@ const CURRENT_OFFER = {
     enabled: true,
     title: "🔥 FLASH SALE - 20% OFF",
     description: "Limited time offer! Use code FLASH20",
-    endDate: "2026-09-30T23:59:59",
+    endDate: "2026-09-30 T 23:59:59",
     couponCode: "FLASH20",
     discountPercent: 20
 };
@@ -73,9 +73,9 @@ const toolsData = [
             before: "Hours of manual depreciation calculations",
             after: "Instant accurate calculations with Tally export!"
         },
-        popular: false,
-        showOnHome: false,
-        hidden : false ,
+        popular: true,
+        showOnHome: true,
+        hidden : true ,
         videoUrl: null
     },
     {
